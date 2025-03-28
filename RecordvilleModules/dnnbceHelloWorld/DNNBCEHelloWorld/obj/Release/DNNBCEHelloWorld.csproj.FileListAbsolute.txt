@@ -1,0 +1,13 @@
+C:\DNN Dev\Dev\bin\DNNBCEHelloWorld.dll.config
+C:\DNN Dev\Dev\bin\DNNBCEHelloWorld.dll
+C:\DNN Dev\Dev\bin\DNNBCEHelloWorld.pdb
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHelloWorld.csproj.AssemblyReference.cache
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\Dnn.Bce.DNNBCEHelloWorld.App_LocalResources.Settings.resources
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHelloWorld.csproj.GenerateResource.cache
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHelloWorld.csproj.CoreCompileInputs.cache
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHe.705152AF.Up2Date
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHelloWorld.dll
+C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\dnnbceHelloWorld\DNNBCEHelloWorld\obj\Release\DNNBCEHelloWorld.pdb
+C:\DNN Dev\Dev\DesktopModules\bin\DNNBCEHelloWorld.dll.config
+C:\DNN Dev\Dev\DesktopModules\bin\DNNBCEHelloWorld.dll
+C:\DNN Dev\Dev\DesktopModules\bin\DNNBCEHelloWorld.pdb
