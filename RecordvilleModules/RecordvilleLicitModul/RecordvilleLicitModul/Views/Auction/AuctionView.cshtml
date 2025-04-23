@@ -1,0 +1,24 @@
+﻿@using LicitModul.DnnRecordvilleLicitModul.Models
+@model LicitModul.DnnRecordvilleLicitModul.Models.Auction
+
+<h2>@Model.ProductName</h2>
+
+<p><strong>Jelenlegi licit:</strong> @Model.CurrentBid</p>
+<p><strong>Minimális növekedés:</strong> @Model.MinimumBidIncrement</p>
+<p><strong>A licit lejárata:</strong> @Model.EndTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+
+<!-- Licitálás form -->
+<div style="display: flex; gap: 10px;">
+    <input type="number" name="bidAmount" id="bidAmount"
+           min="@Model.CurrentBid + Model.MinimumBidIncrement"
+           placeholder="Új licit összege" required
+           style="padding: 5px; width: 200px;" />
+    <button type="submit" style="padding: 5px 10px; background-color: #4CAF50; color: white; border: none;">
+        Licitálok
+    </button>
+</div>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <p style="color:red;">@ViewBag.ErrorMessage</p>
+}
