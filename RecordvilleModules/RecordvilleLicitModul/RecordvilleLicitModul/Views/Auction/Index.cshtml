@@ -1,0 +1,28 @@
+﻿@using LicitModul.DnnRecordvilleLicitModul.Models
+@using System.Text.RegularExpressions
+@using DotNetNuke.Web.Mvc.Helpers
+@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<LicitModul.DnnRecordvilleLicitModul.Models.Auction>>
+
+@if (Model == null || !Model.Any())
+{
+    <p>Nincsenek aktív aukciók elérhetőek.</p>
+}
+else
+{
+    <ul class="tm_tl">
+        @foreach (var auction in Model)
+        {
+            <li class="tm_t">
+                <h3>@auction.ProductName</h3>
+                <div class="tm_td">
+                    Jelenlegi licit: @auction.CurrentBid<br />
+                    Minimális növekedés: @auction.MinimumBidIncrement<br />
+                    Aukció vége: @auction.EndTime.ToString("yyyy-MM-dd HH:mm:ss")
+                </div>
+                <div>
+                    <a href="@Url.Action("Details", "Auction", new { id = auction.Id })">Licitálás</a>
+                </div>
+            </li>
+        }
+    </ul>
+}
