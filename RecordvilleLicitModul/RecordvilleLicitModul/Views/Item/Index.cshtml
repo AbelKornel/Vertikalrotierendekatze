@@ -1,0 +1,94 @@
+﻿
+@model IEnumerable<LicitModul.DnnRecordvilleLicitModul.Models.Item>
+
+
+    @using System
+    @using DotNetNuke.Web.Mvc.Helpers
+    @using DotNetNuke.Entities.Users
+    @using DotNetNuke.Framework.JavaScriptLibraries
+
+    // Teszteléshez
+    @if (Model != null)
+    {
+        <p style="color:green;">Típus: @Model.GetType().FullName</p>
+        <p style="color:green;">Elemek száma: @Model.Count()</p>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>@item.ItemName – @item.StartingPrice Ft</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p style="color:red;">Model NULL</p>
+    }
+
+
+    @{
+
+        var userId = UserController.Instance.GetCurrentUserInfo().UserID;
+    }
+
+    <link rel="stylesheet" href="../../module.css" />
+
+    <div class="auction-list">
+
+
+        @if (Model == null || !Model.Any())
+        {
+            <p class="text-danger">Nincs megjeleníthető aukciós adat.</p>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <div class="auction-details">
+                    <h2>@item.ItemName</h2>
+
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl" alt="Item image" style="max-width: 100%; height: auto;" />
+                    }
+
+                    <p><strong>Leírás:</strong> @item.ItemDescription</p>
+
+                    <p>
+                        <strong>Kezdő ár:</strong> @item.StartingPrice.ToString("N0") Ft<br />
+                        <strong>Jelenlegi ár:</strong>
+                        @(item.HighestPrice.HasValue ? item.HighestPrice.Value.ToString("N0") + " Ft" : "Nincs még licit")
+                    </p>
+
+                    <p><strong>Minimum licitlépcső:</strong> @item.MinimumBidIncrement.ToString("N0") Ft</p>
+
+                    <p>
+                        <strong>Licit vége:</strong>
+                        @(item.AuctionEndTime.HasValue
+                    ? item.AuctionEndTime.Value.ToLocalTime().ToString("yyyy. MMM d. HH:mm")
+                    : "Nincs beállítva")
+                    </p>
+
+                    @if (item.RecentBids != null && item.RecentBids.Any())
+                    {
+                        <h4>Legutóbbi licitek:</h4>
+                        <ul>
+                            @foreach (var bid in item.RecentBids)
+                            {
+                                <li>
+                                    @bid.Amount.ToString("N0") Ft –
+                                    @bid.AuctionTime.ToLocalTime().ToString("yyyy.MM.dd HH:mm")
+                                </li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <p>Nincs még licit.</p>
+                    }
+
+                    <hr />
+                </div>
+            }
+        }
+
+    </div>
