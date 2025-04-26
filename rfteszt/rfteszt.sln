@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rfteszt", "rfteszt\rfteszt.csproj", "{FFB9DA80-39EE-4458-A89D-3169AEAEB162}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFB9DA80-39EE-4458-A89D-3169AEAEB162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB9DA80-39EE-4458-A89D-3169AEAEB162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB9DA80-39EE-4458-A89D-3169AEAEB162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB9DA80-39EE-4458-A89D-3169AEAEB162}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65F0A7DE-4966-45BB-AB51-B051D8360867}
+	EndGlobalSection
+EndGlobal
