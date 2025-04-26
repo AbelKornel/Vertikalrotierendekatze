@@ -7,6 +7,9 @@ C:\DNN Dev\Dev\DesktopModules\RecordvilleModulesGitHubRepo\RecordvilleModules\Re
 C:\DNN Dev\Dev\DesktopModules\bin\RecordvilleLicitModul.dll.config
 C:\DNN Dev\Dev\DesktopModules\bin\RecordvilleLicitModul.dll
 C:\DNN Dev\Dev\DesktopModules\bin\RecordvilleLicitModul.pdb
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.dll.config
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.dll
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.pdb
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Debug\RecordvilleLicitModul.csproj.AssemblyReference.cache
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Debug\LicitModul.DnnRecordvilleLicitModul.App_LocalResources.Settings.resources
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Debug\RecordvilleLicitModul.csproj.GenerateResource.cache

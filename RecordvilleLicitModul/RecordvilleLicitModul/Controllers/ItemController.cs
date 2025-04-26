@@ -12,6 +12,7 @@
 
 using DotNetNuke.Entities.Users;
 using DotNetNuke.Framework.JavaScriptLibraries;
+using DotNetNuke.UI.Containers;
 using DotNetNuke.Web.Mvc.Framework.ActionFilters;
 using DotNetNuke.Web.Mvc.Framework.Controllers;
 using LicitModul.DnnRecordvilleLicitModul.Components;
@@ -20,6 +21,8 @@ using System;
 using System.Linq;
 using System.Web.Compilation;
 using System.Web.Mvc;
+using Newtonsoft.Json;
+
 
 namespace LicitModul.DnnRecordvilleLicitModul.Controllers
 {
@@ -50,40 +53,44 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
             return View(item);
         }
 
+
         [HttpPost]
-        [System.Web.Mvc.ValidateAntiForgeryToken]
-        public ActionResult Auctions(int ItemId, int UserId, decimal BidAmount)
+        public JsonResult PlaceBid(int itemId, int userId, decimal bidAmount)
         {
-            var item = AuctionManager.Instance.GetItem(ItemId, ModuleContext.ModuleId);
-
-            if (BidAmount < item.HighestPrice + item.MinimumBidIncrement)
+            try
             {
-                ModelState.AddModelError("", "Minimum összeg magasabb kell legyen mint a mostani ár plusz a minimum licit");
-                return RedirectToAction("Index");
+                var item = AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
+                if (item == null)
+                {
+                    return Json(new { newPrice = item.StartingPrice });
+                }
+
+                decimal currentPrice = item.HighestPrice ?? item.StartingPrice;
+                if (bidAmount < currentPrice + item.MinimumBidIncrement)
+                {
+                    return Json(new { newPrice = item.HighestPrice });
+                }
+
+                var bid = new Auction
+                {
+                    UserId = userId,
+                    ItemId = itemId,
+                    Amount = bidAmount,
+                    AuctionTime = DateTime.UtcNow
+                };
+
+                AuctionGenerator.Instance.CreateBid(bid);
+
+                item.HighestPrice = bidAmount;
+                item.HighestUserId = userId;
+                AuctionManager.Instance.UpdateItem(item);
+                return Json(new { newPrice = item.HighestPrice });
             }
-
-            if (item == null)
+            catch (Exception ex)
             {
-                return HttpNotFound("Nincs találat");
+                return Json(new { newPrice = 0 });
             }
-
-            var bid = new Auction
-            {
-                UserId = UserId,
-                ItemId = ItemId,
-                Amount = BidAmount,
-                AuctionTime = DateTime.UtcNow
-            };
-
-            AuctionGenerator.Instance.CreateBid(bid);
-            item.HighestPrice = BidAmount;
-            AuctionManager.Instance.UpdateItem(item);
-
-            TempData["SuccessMessage"] = "A licit sikeres!";
-
-            return RedirectToAction("Index");
         }
-        
 
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
@@ -94,7 +101,26 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
             return View(items);
         }
 
+        public ActionResult Details(int itemId)
+        {
+            var item = AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
+            if (item == null)
+            {
+                return HttpNotFound("A termék nem található.");
+            }
+
+            item.RecentBids = AuctionGenerator.Instance.GetBidsByItemId(itemId);
+            ViewBag.ModuleId = ModuleContext.ModuleId;
+            ViewBag.TabId = ModuleContext.TabId;
+            ViewBag.ItemId = itemId;
+            ViewBag.UserId = UserController.Instance.GetCurrentUserInfo().UserID;
+            ViewBag.MinimumBidIncrement = item.MinimumBidIncrement;
+
+            return View("Details", item);
+        }
+
+
+
+
     }
 }
-   
-

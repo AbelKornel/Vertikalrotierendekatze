@@ -20,11 +20,8 @@ using System.Web.Caching;
 namespace LicitModul.DnnRecordvilleLicitModul.Models
 {
     [TableName("RecordvilleLicitModul_Items")]
-    //setup the primary key for table
     [PrimaryKey("ItemId", AutoIncrement = true)]
-    //configure caching using PetaPoco
     [Cacheable("Items", CacheItemPriority.Default, 20)]
-    //scope the objects to the ModuleId of a module on a page (or copy of a module on a page)
     [Scope("ModuleId")]
     public class Item
     {

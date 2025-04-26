@@ -8,11 +8,8 @@ using System.Web.Caching;
 namespace LicitModul.DnnRecordvilleLicitModul.Models
 {
     [TableName("RecordvilleLicitModul_Auctions")]
-    //setup the primary key for table
     [PrimaryKey("AuctionId", AutoIncrement = true)]
-    //configure caching using PetaPoco
-    [Cacheable("Auctions", CacheItemPriority.Default, 20)]
-    //scope the objects to the ModuleId of a module on a page (or copy of a module on a page)
+    [Cacheable("PlaceBid", CacheItemPriority.Default, 20)]
     [Scope("ItemId")]
     public class Auction
     {

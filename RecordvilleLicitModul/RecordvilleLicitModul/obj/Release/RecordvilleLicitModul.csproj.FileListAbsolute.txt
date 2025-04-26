@@ -8,3 +8,6 @@ C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\Recordvil
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Release\Recordvi.78216376.Up2Date
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Release\RecordvilleLicitModul.dll
 C:\DNN Dev\Dev\DesktopModules\RecordvilleModules\RecordvilleLicitModul\RecordvilleLicitModul\obj\Release\RecordvilleLicitModul.pdb
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.dll.config
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.dll
+C:\DNN Dev\Dev\bin\RecordvilleLicitModul.pdb

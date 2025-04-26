@@ -46,12 +46,15 @@
                 <div class="auction-details">
                     <h2>@item.ItemName</h2>
 
+                    <a href="@Url.Action("Details", "Item", new { itemId = item.ItemId })" class="btn btn-primary" style="float: right;">
+                        Részletek →
+                    </a>
+
+
                     @if (!string.IsNullOrEmpty(item.ImageUrl))
                     {
                         <img src="@item.ImageUrl" alt="Item image" style="max-width: 100%; height: auto;" />
                     }
-
-                    <p><strong>Leírás:</strong> @item.ItemDescription</p>
 
                     <p>
                         <strong>Kezdő ár:</strong> @item.StartingPrice.ToString("N0") Ft<br />
@@ -59,32 +62,12 @@
                         @(item.HighestPrice.HasValue ? item.HighestPrice.Value.ToString("N0") + " Ft" : "Nincs még licit")
                     </p>
 
-                    <p><strong>Minimum licitlépcső:</strong> @item.MinimumBidIncrement.ToString("N0") Ft</p>
-
                     <p>
                         <strong>Licit vége:</strong>
                         @(item.AuctionEndTime.HasValue
                     ? item.AuctionEndTime.Value.ToLocalTime().ToString("yyyy. MMM d. HH:mm")
                     : "Nincs beállítva")
                     </p>
-
-                    @if (item.RecentBids != null && item.RecentBids.Any())
-                    {
-                        <h4>Legutóbbi licitek:</h4>
-                        <ul>
-                            @foreach (var bid in item.RecentBids)
-                            {
-                                <li>
-                                    @bid.Amount.ToString("N0") Ft –
-                                    @bid.AuctionTime.ToLocalTime().ToString("yyyy.MM.dd HH:mm")
-                                </li>
-                            }
-                        </ul>
-                    }
-                    else
-                    {
-                        <p>Nincs még licit.</p>
-                    }
 
                     <hr />
                 </div>
