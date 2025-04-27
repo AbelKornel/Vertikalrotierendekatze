@@ -1,0 +1,147 @@
+﻿
+@model IEnumerable<LicitModul.DnnRecordvilleLicitModul.Models.Item>
+
+
+    @using System
+    @using DotNetNuke.Web.Mvc.Helpers
+    @using DotNetNuke.Entities.Users
+    @using DotNetNuke.Framework.JavaScriptLibraries
+
+    @{
+
+        var userId = UserController.Instance.GetCurrentUserInfo().UserID;
+    }
+
+    <link rel="stylesheet" href="/DesktopModules/RecordvilleModules/RecordvilleLicitModul/RecordvilleLicitModul/module.css" />
+
+
+    <div class="auction-list">
+
+        @if (Model == null || !Model.Any())
+        {
+            <p class="text-danger">Nincs megjeleníthető aukciós adat.</p>
+        }
+        else
+        {
+            foreach (var item in Model)
+            {
+                <div class="auction-details" style="position: relative;">
+
+                    <h2>@item.ItemName</h2>
+
+                    <button type="button"
+                            class="btn btn-primary details-button"
+                            data-itemid="@item.ItemId"
+                            data-detailsurl="@Url.Action("Details", "Item", new { itemId = item.ItemId })"
+                            style="float: right;">
+                        Részletek →
+                    </button>
+
+
+
+
+                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                    {
+                        <img src="@item.ImageUrl" alt="Item image" style="max-width: 100%; height: auto;" />
+                    }
+
+                    <p>
+                        <strong>Kezdő ár:</strong> @item.StartingPrice.ToString("N0") Ft<br />
+                        <strong>Jelenlegi ár:</strong>
+                        @(item.HighestPrice.HasValue ? item.HighestPrice.Value.ToString("N0") + " Ft" : "Nincs még licit")
+                    </p>
+
+                    <div>
+                        @if (item.AuctionEndTime != null)
+                        {
+                            <div>
+                                Licit vége: @(item.AuctionEndTime.Value.ToLocalTime().ToString("yyyy.MM.dd HH:mm:ss"))
+                            </div>
+                        }
+                        else
+                        {
+                            <div>
+                                Licit vége: nincs megadva
+                            </div>
+                        }
+
+                    </div>
+
+                    <div>
+                        Hátralévő idő:
+                        <span class="countdownTimer"
+                              data-itemid="@item.ItemId"
+                              data-endtime="@item.AuctionEndTime.Value.ToString("o")">
+                        </span>
+                    </div>
+
+                    <hr />
+                </div>
+            }
+        }
+
+    </div>
+
+
+    <script>
+        function startCountdown() {
+            function updateCountdown(element, endTime) {
+                var now = new Date();
+                var end = new Date(endTime);
+                var distance = end - now;
+
+                if (isNaN(end.getTime())) {
+                    element.innerHTML = "Érvénytelen időpont";
+                    return;
+                }
+
+                if (distance < 0) {
+                    element.innerHTML = "Licit lezárult";
+
+                    var itemId = element.getAttribute('data-itemid');
+                    if (itemId) {
+                        var detailsButton = document.querySelector('.details-button[data-itemid="' + itemId + '"]');
+                        if (detailsButton) {
+                            detailsButton.disabled = true;
+                            detailsButton.classList.add('disabled');
+                            detailsButton.innerText = "Licit Lejárt";
+                        }
+                    }
+
+                    return;
+                }
+
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                element.innerHTML = days + " nap " + hours + " óra " + minutes + " perc " + seconds + " mp";
+            }
+
+            var elements = document.querySelectorAll('.countdownTimer');
+            elements.forEach(function (el) {
+                var endTime = el.getAttribute('data-endtime');
+                setInterval(function () {
+                    updateCountdown(el, endTime);
+                }, 1000);
+            });
+
+            document.querySelectorAll('.details-button').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    if (!button.disabled) {
+                        var url = button.getAttribute('data-detailsurl');
+                        if (url) {
+                            window.location.href = url;
+                        }
+                    }
+                });
+            });
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (document.querySelector('.countdownTimer')) {
+                startCountdown();
+            }
+        });
+    </script>
