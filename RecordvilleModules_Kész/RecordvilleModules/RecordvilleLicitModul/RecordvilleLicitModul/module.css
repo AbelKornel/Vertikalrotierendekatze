@@ -1,0 +1,128 @@
+/* Aukciós lista */
+.auction-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.auction-details {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+    /* Hover effektus */
+    .auction-details:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Aukciós kép */
+    .auction-details img {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+
+    /* Aukció neve */
+    .auction-details h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #212529;
+    }
+
+    /* Aukció leírása */
+    .auction-details p {
+        margin: 5px 0;
+        font-size: 1rem;
+        color: #555;
+    }
+
+        /* Kiemelések a leírásban */
+        .auction-details p strong {
+            color: #111;
+            font-weight: 600;
+        }
+
+            /* Ár és licit vége színezése */
+            .auction-details p strong + span,
+            .auction-details p span {
+                font-weight: bold;
+                color: #8b0000; /* Bordó piros ár */
+            }
+
+    /* Aukciós gomb */
+    .auction-details .btn {
+        margin-top: 15px;
+        background-color: #8b0000;
+        border-color: #8b0000;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+        .auction-details .btn:hover {
+            background-color: #a60000;
+        }
+
+/* Countdown timer */
+.countdownTimer {
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: #28a745;
+}
+
+/* Lejárt aukció - piros */
+.timer-ended {
+    color: #dc3545 !important;
+}
+
+/* Badge */
+.auction-ended-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #dc3545;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Licitálás gomb */
+.details-container .btn {
+    margin-top: 20px;
+    background-color: #8b0000;
+    border-color: #8b0000;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+    .details-container .btn:hover {
+        background-color: #a60000;
+    }

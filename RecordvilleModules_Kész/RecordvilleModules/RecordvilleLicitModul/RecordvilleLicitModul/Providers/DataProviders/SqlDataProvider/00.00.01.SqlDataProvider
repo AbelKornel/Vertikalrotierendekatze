@@ -1,0 +1,59 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+
+IF NOT EXISTS (
+    SELECT * FROM sys.objects 
+    WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}RecordvilleLicitModul_Items]')
+    AND type in (N'U')
+)
+
+CREATE TABLE {databaseOwner}{objectQualifier}RecordvilleLicitModul_Items
+(
+    ItemId int NOT NULL IDENTITY (1, 1),
+    ItemName nvarchar(MAX) NOT NULL,
+    ItemDescription nvarchar(MAX) NOT NULL,
+    ImageUrl nvarchar(MAX) NULL,
+    ModuleId int NOT NULL,
+    HighestPrice decimal(18, 2) NULL,
+    HighestUserId int NULL,
+    AuctionEndTime datetime NULL,
+    AuctionStartTime datetime NULL,
+    MinimumBidIncrement decimal(18, 2) NULL,
+    StartingPrice decimal(18, 2) NOT NULL,
+    PRIMARY KEY (ItemId)
+) ON [PRIMARY]
+TEXTIMAGE_ON [PRIMARY]
+GO
+
+IF NOT EXISTS (
+    SELECT * FROM sys.objects 
+    WHERE object_id = OBJECT_ID(N'{databaseOwner}[{objectQualifier}RecordvilleLicitModul_Auctions]')
+    AND type in (N'U')
+)
+
+CREATE TABLE {databaseOwner}{objectQualifier}RecordvilleLicitModul_Auctions
+(
+    AuctionId int NOT NULL IDENTITY(1,1),
+    ItemId int NOT NULL,
+    UserId int NOT NULL,
+    Amount decimal(18, 2) NOT NULL,
+    AuctionTime datetime NOT NULL,
+    PRIMARY KEY (AuctionId),
+    FOREIGN KEY (ItemId) REFERENCES {databaseOwner}{objectQualifier}RecordvilleLicitModul_Items(ItemId)
+)
+GO
+
+
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/
