@@ -1,0 +1,185 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|c:\\dnn dev\\dev\\desktopmodules\\recordvillemodules\\recordvillelicitmodul\\recordvillelicitmodul\\views\\item\\winningbids.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\views\\item\\winningbids.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\providers\\dataproviders\\sqldataprovider\\00.00.01.sqldataprovider||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\providers\\dataproviders\\sqldataprovider\\00.00.01.sqldataprovider||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\views\\item\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\views\\item\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\components\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\components\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\module.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|c:\\dnn dev\\dev\\desktopmodules\\recordvillemodules\\recordvillelicitmodul\\recordvillelicitmodul\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\controllers\\itemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\models\\auction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\views\\item\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\views\\item\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\recordvillelicitmodul\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4130D773-4930-4C21-9BCF-0C5244F585D0}|RecordvilleLicitModul\\RecordvilleLicitModul.csproj|solutionrelative:recordvillelicitmodul\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WinningBids.cshtml",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\WinningBids.cshtml",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Views\\Item\\WinningBids.cshtml",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\WinningBids.cshtml",
+              "RelativeToolTip": "RecordvilleLicitModul\\Views\\Item\\WinningBids.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T20:41:17.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Auction.cs",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Models\\Auction.cs",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Models\\Auction.cs",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Models\\Auction.cs",
+              "RelativeToolTip": "RecordvilleLicitModul\\Models\\Auction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T14:46:50.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Models\\Item.cs",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Models\\Item.cs",
+              "RelativeToolTip": "RecordvilleLicitModul\\Models\\Item.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T14:46:34.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "00.00.01.SqlDataProvider",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Providers\\DataProviders\\SqlDataProvider\\00.00.01.SqlDataProvider",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Providers\\DataProviders\\SqlDataProvider\\00.00.01.SqlDataProvider",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Providers\\DataProviders\\SqlDataProvider\\00.00.01.SqlDataProvider",
+              "RelativeToolTip": "RecordvilleLicitModul\\Providers\\DataProviders\\SqlDataProvider\\00.00.01.SqlDataProvider",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-04T14:36:46.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ItemManager.cs",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Components\\ItemManager.cs",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Components\\ItemManager.cs",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Components\\ItemManager.cs",
+              "RelativeToolTip": "RecordvilleLicitModul\\Components\\ItemManager.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAuwFMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T14:32:16.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\Index.cshtml",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Views\\Item\\Index.cshtml",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\Index.cshtml",
+              "RelativeToolTip": "RecordvilleLicitModul\\Views\\Item\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFQAAADPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T14:20:10.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\Details.cshtml",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Views\\Item\\Details.cshtml",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Views\\Item\\Details.cshtml",
+              "RelativeToolTip": "RecordvilleLicitModul\\Views\\Item\\Details.cshtml",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAAAoBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T14:20:09.594Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "module.css",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\module.css",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\module.css",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\module.css",
+              "RelativeToolTip": "RecordvilleLicitModul\\module.css",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAAAHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-04T14:16:18.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ItemController.cs",
+              "DocumentMoniker": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Controllers\\ItemController.cs",
+              "RelativeDocumentMoniker": "RecordvilleLicitModul\\Controllers\\ItemController.cs",
+              "ToolTip": "C:\\DNN Dev\\Dev\\DesktopModules\\RecordvilleModules\\RecordvilleLicitModul\\RecordvilleLicitModul\\Controllers\\ItemController.cs",
+              "RelativeToolTip": "RecordvilleLicitModul\\Controllers\\ItemController.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAA8wJ8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T13:30:31.736Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

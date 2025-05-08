@@ -1,0 +1,32 @@
+﻿@model IEnumerable<LicitModul.DnnRecordvilleLicitModul.Models.Item>
+
+    <h2>Ön által megnyert licitek:</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <p class="text-danger">Nincs nyertes licit.</p>
+    }
+    else
+    {
+        <div class="auction-list">
+            @foreach (var item in Model)
+            {
+                <div class="auction-details">
+                    <img src="@item.ImageUrl" alt="@item.ItemName" class="auction-img" />
+                    <h2>@item.ItemName</h2>
+                    <p>
+                        <strong>Jelenlegi ár:</strong> @(item.HighestPrice.HasValue ? item.HighestPrice.Value.ToString("N0") + " Ft" : "Nincs még licit")<br />
+                        <strong>Licit vége:</strong> @(item.AuctionEndTime.HasValue ? item.AuctionEndTime.Value.ToLocalTime().ToString("yyyy.MM.dd HH:mm:ss") : "Nincs megadva")
+                    </p>
+                    <p>
+                        Köszönjük szépen a licitálást! Hamarosan felvesszük Önnel a kapcsolatot a(z) @ViewBag.UserEmail email címen, további részletekkel!
+                    </p>
+                </div>
+            }
+        </div>
+    }
+
+    @if (ViewBag.Message != null)
+    {
+        <p class="text-danger">@ViewBag.Message</p>
+    }
