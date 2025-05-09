@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -19,17 +19,18 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Hotcakes.CommerceDTO">
-      <HintPath>..\..\University\4.félév\rf\Hotcakes.CommerceDTO.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\Hotcakes.CommerceDTO.dll</HintPath>
     </Reference>
     <Reference Include="Hotcakes.Web">
-      <HintPath>..\..\University\4.félév\rf\Hotcakes.Web.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\Hotcakes.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\..\University\4.félév\rf\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
   </ItemGroup>
 
