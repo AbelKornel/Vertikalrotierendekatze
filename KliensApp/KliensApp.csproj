@@ -24,13 +24,13 @@
 
   <ItemGroup>
     <Reference Include="Hotcakes.CommerceDTO">
-      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\Hotcakes.CommerceDTO.dll</HintPath>
+      <HintPath>..\Hotcakes.CommerceDTO.dll</HintPath>
     </Reference>
     <Reference Include="Hotcakes.Web">
-      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\Hotcakes.Web.dll</HintPath>
+      <HintPath>..\Hotcakes.Web.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\..\..\..\OneDrive\Documents\Asztali gép\University\4.félév\rf\System.Net.Http.Formatting.dll</HintPath>
+      <HintPath>..\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
   </ItemGroup>
 
