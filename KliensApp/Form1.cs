@@ -3,10 +3,9 @@ using KliensApp.Models;
 using System.Windows.Forms;
 using Hotcakes.CommerceDTO.v1.Client;
 using Hotcakes.CommerceDTO.v1;
-using Newtonsoft;
-
-
-
+using Hotcakes.CommerceDTO.v1.Catalog;
+using Hotcakes.CommerceDTO.v1.Shipping;
+using Newtonsoft.Json;
 
 
 namespace KliensApp
@@ -100,10 +99,21 @@ namespace KliensApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Api proxy = apiHivas();
+            Api proxy = ApiHivas();
 
-            var response = proxy.OrdersFindAll();
-            if (response == null || response.Content == null || response.Content.Count == 0)
+            // create a new instance of a product
+            var product = new ProductDTO();
+
+            // populate the product object with minimal information
+            product.ProductName = "Teszt termék";
+            product.Sku = "TP0001";
+            product.SitePrice = 12000;
+            product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+
+            // call the API to create the new product
+            ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null); ;
+
+            if (response == null || response.Content == null)
             {
                 MessageBox.Show("Nem sikerült lekérni az adatokat!");
                 return;
@@ -123,15 +133,40 @@ namespace KliensApp
                 e.Cancel = true;
             }
         }
-        private static Api apiHivas()
+        private static Api ApiHivas()
         {
             string url = "http://rendfejl1018.northeurope.cloudapp.azure.com/";
-            string kulcs = "1-40db881d-4fed-4469-9c36-00f257bf6789";
+            string key = "1-4496a442-8767-4aa7-ad10-c0c8263098f1";
 
-            Api proxy = new Api(url, kulcs);
+            Api proxy = new Api(url, key);
+
             return proxy;
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (orderedProductsBindingSource != null)
+            {
+                DialogResult dr = MessageBox.Show("Biztos, hogy törölni szeretnéd?", "Megerõsítés", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    orderedProductsBindingSource.RemoveCurrent();
+                    try
+                    {
+                        _context.SaveChanges();
+                    }
+                    catch (Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Nincs kiválasztva tétel!");
+                return;
+            }
+        }
     }
 }
