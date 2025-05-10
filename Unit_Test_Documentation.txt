@@ -1,0 +1,116 @@
+# DNN Weboldal Kiegészítő Kliens Alkalmazás - Unit Teszt Dokumentáció
+
+## Bevezetés
+Ez a dokumentáció a KliensApp unit tesztjeit írja le. Itt leírom, hogy miket teszteltem és hogyan működnek a tesztek.
+
+## Tesztelési stratégia
+A unit tesztek NUnit keretrendszert használnak. A következő dolgokat teszteltem:
+1. Adatmodelleket - jól működnek-e a modellek
+2. Üzleti logikát - jól működnek-e a műveletek
+3. Felhasználói felületet - jól működnek-e a form-ok
+4. Adatbázis-műveleteket - jól működik-e az adatbázis elérés
+
+## Tesztelt komponensek
+
+### Adatmodell tesztek
+- Teszteltem a ProductsToOrder modellt
+- Teszteltem az OrderedProducts modellt
+- Teszteltem a HccSearchQuery modellt
+
+### Üzleti logika tesztek
+- Teszteltem a termék hozzáadást
+- Teszteltem a rendelési folyamatot
+- Teszteltem a keresési funkciókat
+
+### UI komponens tesztek
+- Teszteltem a Form1 gombjait és eseménykezelőit
+- Teszteltem az Ordering form működését
+
+### Adatbázis műveletek tesztek
+- Teszteltem a KliensDbContext metódusait
+- Teszteltem az adatok mentését és betöltését
+
+## Tesztek futtatása
+A teszteket így lehet futtatni:
+1. Nyisd meg a projektet Visual Studio-ban
+2. Kattints a View -> Test Explorer menüpontra
+3. Kattints a "Futtatás összes" gombra, vagy válaszd ki a teszteket egyenként
+
+## Tesztek részletes leírása
+
+### ModelTests
+Ezek a tesztek az adatmodelleket tesztelik, hogy helyesen működnek-e.
+
+#### ProductsToOrderTests
+- TestProductsToOrderProperties: Megnézi, hogy a modell tulajdonságai jól működnek-e.
+- TestProductsToOrderIdDefaultValue: Megnézi, hogy az Id alapértéke 0-e.
+- TestProductsToOrderPhraseNullable: Megnézi, hogy a Phrase lehet-e null.
+
+#### OrderedProductsTests
+- TestOrderedProductsProperties: Megnézi, hogy a modell tulajdonságai jól működnek-e.
+- TestOrderedProductsIdDefaultValue: Megnézi, hogy az OrderId alapértéke 0-e.
+- TestOrderedProductsQuantityNullable: Megnézi, hogy a Quantity lehet-e null.
+
+### FormTests
+Ezek a tesztek a formokat és eseménykezelőket tesztelik.
+
+#### Form1Tests
+- TestForm1LoadEvent: Megnézi, hogy a Form1_Load jól inicializálja-e a dolgokat.
+- TestListUpdateMethod: Megnézi, hogy a ListUpdate jól frissíti-e a listát.
+- TestDataGridViewUpdateMethod: Megnézi, hogy a DataGridViewUpdate jól frissíti-e a táblázatot.
+- TestButton1ClickEvent: Megnézi, hogy az 1. gomb kattintása jól működik-e.
+- TestButton2ClickEvent: Megnézi, hogy a 2. gomb kattintása jól működik-e.
+- TestButton3ClickEvent: Megnézi, hogy a 3. gomb kattintása jól működik-e.
+- TestApiHivasMethod: Megnézi, hogy az API hívás jól működik-e.
+
+#### OrderingTests
+- TestButton1ClickEvent: Megnézi, hogy az 1. gomb kattintása jól működik-e.
+- TestButton2ClickEvent: Megnézi, hogy a 2. gomb kattintása jól működik-e.
+- TestCheckDBMethod: Megnézi, hogy a CheckDB jól validálja-e a darabszámot.
+- TestCheckNameMethod: Megnézi, hogy a CheckName jól validálja-e a nevet.
+- TestTextBox1ValidationEvents: Megnézi, hogy a név mező validációja jól működik-e.
+- TestTextBox2ValidationEvents: Megnézi, hogy a darabszám mező validációja jól működik-e.
+
+### DatabaseTests
+Ezek a tesztek az adatbázis műveleteket tesztelik.
+
+#### KliensDbContextTests
+- TestProductsToOrderDbSet: Megnézi, hogy a ProductsToOrder tábla létezik-e.
+- TestOrderedProductsDbSet: Megnézi, hogy az OrderedProducts tábla létezik-e.
+- TestHccSearchQueryDbSet: Megnézi, hogy a HccSearchQuery tábla létezik-e.
+
+### IntegrationTests
+Ezek a tesztek a komponensek közötti integrációt tesztelik.
+
+#### Form1IntegrationTests
+- A Form1 és az Ordering form kapcsolatát teszteli.
+- A Form1 és az adatbázis kapcsolatát teszteli.
+
+## Tesztlefedettség
+A tesztek ezeket a funkciókat fedik le:
+- Termék megrendelést
+- Keresési funkciókat
+- Adatbázis műveleteket
+
+## Mockolt komponensek
+Az adatbázist mockolom a tesztekben, hogy ne kelljen valódi adatbázis. Ehhez Moq-ot használok.
+
+## Tesztprojekt telepítése
+Ezeket a csomagokat kell telepíteni:
+- NUnit (v4.0.1 vagy újabb)
+- NUnit3TestAdapter (v4.5.0 vagy újabb)
+- NUnit.Analyzers (v3.10.0 vagy újabb)
+- Moq (v4.18.4 vagy újabb)
+- Microsoft.EntityFrameworkCore.InMemory (a memóriában működő adatbázishoz)
+
+## NUnit fejlesztési folyamat
+Így írtam a teszteket:
+1. A tesztosztályokat [TestFixture] attributummal jelöltem
+2. A tesztmetódusokat [Test] attributummal jelöltem
+3. A setup metódusokat [SetUp] attributummal jelöltem
+4. Assert.That(...) kifejezéseket használtam az ellenőrzéshez
+
+A teszteket így építettem fel:
+1. Előkészítés: Létrehoztam a tesztelendő objektumokat
+2. Művelet: Meghívtam a tesztelendő metódust
+3. Ellenőrzés: Megnéztem, hogy jó lett-e az eredmény

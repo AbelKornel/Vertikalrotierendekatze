@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             button1 = new Button();
             listBox1 = new ListBox();
@@ -46,7 +45,6 @@
             label3 = new Label();
             comboBox1 = new ComboBox();
             hccSearchQueryBindingSource = new BindingSource(components);
-            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)productsToOrderBindingSource).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)orderedProductsBindingSource).BeginInit();
@@ -55,11 +53,10 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button1.BackColor = Color.Firebrick;
             button1.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(785, 30);
+            button1.Location = new Point(651, 29);
             button1.Name = "button1";
             button1.Size = new Size(154, 56);
             button1.TabIndex = 0;
@@ -69,16 +66,14 @@
             // 
             // listBox1
             // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             listBox1.BackColor = Color.Gainsboro;
             listBox1.DataSource = productsToOrderBindingSource;
             listBox1.DisplayMember = "Phrase";
-            listBox1.Font = new Font("Malgun Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 25;
             listBox1.Location = new Point(31, 148);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(471, 454);
+            listBox1.Size = new Size(326, 404);
             listBox1.TabIndex = 1;
             listBox1.ValueMember = "id";
             // 
@@ -88,7 +83,6 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
             label1.Location = new Point(36, 105);
@@ -99,12 +93,11 @@
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.None;
             button2.BackColor = Color.Firebrick;
             button2.Font = new Font("Segoe UI Black", 14F, FontStyle.Bold, GraphicsUnit.Point, 238);
             button2.ForeColor = Color.White;
             button2.Image = Properties.Resources.arrow;
-            button2.Location = new Point(557, 316);
+            button2.Location = new Point(399, 285);
             button2.Name = "button2";
             button2.Size = new Size(120, 120);
             button2.TabIndex = 3;
@@ -113,30 +106,20 @@
             // 
             // dataGridView1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.BackgroundColor = Color.Gainsboro;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Malgun Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { orderIdDataGridViewTextBoxColumn, productNameDataGridViewTextBoxColumn, quantityDataGridViewTextBoxColumn });
             dataGridView1.DataSource = orderedProductsBindingSource;
             dataGridView1.GridColor = Color.Gainsboro;
-            dataGridView1.Location = new Point(734, 148);
+            dataGridView1.Location = new Point(570, 148);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(535, 454);
+            dataGridView1.Size = new Size(360, 404);
             dataGridView1.TabIndex = 4;
             // 
             // orderIdDataGridViewTextBoxColumn
             // 
-            orderIdDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             orderIdDataGridViewTextBoxColumn.DataPropertyName = "OrderId";
             orderIdDataGridViewTextBoxColumn.HeaderText = "OrderId";
             orderIdDataGridViewTextBoxColumn.MinimumWidth = 8;
@@ -146,21 +129,19 @@
             // 
             // productNameDataGridViewTextBoxColumn
             // 
-            productNameDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             productNameDataGridViewTextBoxColumn.DataPropertyName = "ProductName";
             productNameDataGridViewTextBoxColumn.HeaderText = "ProductName";
             productNameDataGridViewTextBoxColumn.MinimumWidth = 8;
             productNameDataGridViewTextBoxColumn.Name = "productNameDataGridViewTextBoxColumn";
-            productNameDataGridViewTextBoxColumn.Width = 160;
+            productNameDataGridViewTextBoxColumn.Width = 150;
             // 
             // quantityDataGridViewTextBoxColumn
             // 
-            quantityDataGridViewTextBoxColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             quantityDataGridViewTextBoxColumn.DataPropertyName = "Quantity";
             quantityDataGridViewTextBoxColumn.HeaderText = "Quantity";
             quantityDataGridViewTextBoxColumn.MinimumWidth = 8;
             quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            quantityDataGridViewTextBoxColumn.Width = 116;
+            quantityDataGridViewTextBoxColumn.Width = 150;
             // 
             // orderedProductsBindingSource
             // 
@@ -168,17 +149,16 @@
             // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.Right;
             button3.BackColor = Color.Firebrick;
             button3.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(1305, 218);
+            button3.Location = new Point(966, 285);
             button3.Name = "button3";
             button3.Size = new Size(166, 120);
             button3.TabIndex = 5;
             button3.Text = "Raktárra vétel";
             button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            //button3.Click += button3_Click;
             // 
             // label2
             // 
@@ -192,10 +172,9 @@
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             label3.AutoSize = true;
             label3.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            label3.Location = new Point(734, 105);
+            label3.Location = new Point(570, 105);
             label3.Name = "label3";
             label3.Size = new Size(190, 25);
             label3.TabIndex = 7;
@@ -206,11 +185,10 @@
             comboBox1.DataSource = hccSearchQueryBindingSource;
             comboBox1.DisplayMember = "QueryPhrase";
             comboBox1.DropDownHeight = 300;
-            comboBox1.Font = new Font("Malgun Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox1.IntegralHeight = false;
             comboBox1.Location = new Point(229, 43);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(531, 33);
+            comboBox1.Size = new Size(392, 33);
             comboBox1.TabIndex = 0;
             comboBox1.ValueMember = "Bvin";
             // 
@@ -219,27 +197,12 @@
             hccSearchQueryBindingSource.DataSource = typeof(Models.HccSearchQuery);
             hccSearchQueryBindingSource.CurrentChanged += hccSearchQueryBindingSource_CurrentChanged;
             // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Right;
-            button4.BackColor = Color.Firebrick;
-            button4.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(1305, 414);
-            button4.Name = "button4";
-            button4.Size = new Size(166, 120);
-            button4.TabIndex = 8;
-            button4.Text = "Rendelés törlése";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // Form1
+            // OrderManager
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1508, 655);
-            Controls.Add(button4);
+            ClientSize = new Size(1166, 564);
             Controls.Add(comboBox1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -250,7 +213,7 @@
             Controls.Add(listBox1);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "Form1";
+            Name = "OrderManager";
             Text = "Order Manager";
             FormClosing += OrderManager_FormClosing;
             Load += Form1_Load;
@@ -275,10 +238,9 @@
         private ComboBox comboBox1;
         private BindingSource hccSearchQueryBindingSource;
         private BindingSource productsToOrderBindingSource;
-        private BindingSource orderedProductsBindingSource;
         private DataGridViewTextBoxColumn orderIdDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn productNameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
-        private Button button4;
+        private BindingSource orderedProductsBindingSource;
     }
 }
