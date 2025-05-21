@@ -25,12 +25,6 @@
     <Reference Include="Hotcakes.CommerceDTO">
       <HintPath>..\..\University\4.félév\rf\Hotcakes.CommerceDTO.dll</HintPath>
     </Reference>
-    <Reference Include="Hotcakes.Web">
-      <HintPath>..\..\University\4.félév\rf\Hotcakes.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Http.Formatting">
-      <HintPath>..\..\University\4.félév\rf\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
