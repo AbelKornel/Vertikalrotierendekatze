@@ -3,6 +3,7 @@ using KliensApp.Models;
 using System.Windows.Forms;
 using Hotcakes.CommerceDTO.v1.Client;
 using Hotcakes.CommerceDTO.v1;
+using Hotcakes.CommerceDTO.v1.Catalog;
 
 
 
@@ -110,12 +111,17 @@ namespace KliensApp
         {
             Api proxy = apiHivas();
 
-            var response = proxy.OrdersFindAll();
-            if (response == null || response.Content == null || response.Content.Count == 0)
-            {
-                MessageBox.Show("Nem sikerült lekérni az adatokat!");
-                return;
-            }
+            // create a new instance of a product
+            var product = new ProductDTO();
+
+            // populate the product object with minimal information
+            product.ProductName = "teszt";
+            product.Sku = "TP001";
+            product.SitePrice = 10000;
+            product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+
+            // call the API to create the new product
+            ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
         }
         
         private void hccSearchQueryBindingSource_CurrentChanged(object sender, EventArgs e)
