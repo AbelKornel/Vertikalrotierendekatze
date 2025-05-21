@@ -1,8 +1,8 @@
 using KliensApp.Data;
 using KliensApp.Models;
 using System.Windows.Forms;
-//using Hotcakes.CommerceDTO.v1.Client;
-//using Hotcakes.CommerceDTO.v1;
+using Hotcakes.CommerceDTO.v1.Client;
+using Hotcakes.CommerceDTO.v1;
 
 
 
@@ -20,6 +20,16 @@ namespace KliensApp
             _context = new KliensDbContext();
 
         }
+        
+        private static Api apiHivas()
+        {
+            string url = "http://rendfejl1018.northeurope.cloudapp.azure.com/";
+            string kulcs = "1-40db881d-4fed-4469-9c36-00f257bf6789";
+
+            Api proxy = new Api(url, kulcs);
+            return proxy;
+        }
+
         private void ListUpdate()
         {
             var toOrder = from x in _context.ProductsToOrder
@@ -95,7 +105,7 @@ namespace KliensApp
 
             }
         }
-        /*
+        
         private void button3_Click(object sender, EventArgs e)
         {
             Api proxy = apiHivas();
@@ -107,7 +117,7 @@ namespace KliensApp
                 return;
             }
         }
-        */
+        
         private void hccSearchQueryBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
@@ -121,15 +131,7 @@ namespace KliensApp
                 e.Cancel = true;
             }
         }
-        /*Private static Api apiHivas()
-        {
-            string url = "http://rendfejl1018.northeurope.cloudapp.azure.com/";
-            string kulcs = "1-40db881d-4fed-4469-9c36-00f257bf6789";
-
-            Api proxy = new Api(url, kulcs);
-            return proxy;
-        }
-            */
+          
 
     }
 }
