@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -15,11 +15,11 @@
       "RelativeMoniker": "D:0:0:{F1DB8FBD-9855-4384-8F4D-102B9E079600}|KliensApp\\KliensApp.csproj|solutionrelative:kliensapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "KLiensApp2\\Form2.cs",
               "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Form2.cs*",
               "RelativeToolTip": "KLiensApp2\\Form2.cs*",
-              "ViewState": "AgIAAJIAAAAAAAAAAAAUwK4AAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAwwKIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-22T09:00:48.865Z",
               "IsPinned": true,
@@ -83,8 +83,7 @@
               "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Ordering.cs [Design]",
               "RelativeToolTip": "KLiensApp2\\Ordering.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T10:46:44.066Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-22T10:46:44.066Z"
             },
             {
               "$type": "Document",
@@ -108,8 +107,7 @@
               "RelativeToolTip": "KLiensApp2\\Ordering.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAIwC4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T09:31:49.382Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T09:31:49.382Z"
             },
             {
               "$type": "Document",
@@ -121,8 +119,7 @@
               "RelativeToolTip": "KliensApp\\Form1.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAuwG8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T10:04:50.207Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-22T10:04:50.207Z"
             }
           ]
         }

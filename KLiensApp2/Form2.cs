@@ -126,54 +126,67 @@ namespace KLiensApp2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            DialogResult dr = MessageBox.Show("Biztosan törölni akarod??", "Megerősítés", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
             {
-                
-                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["OrderID"].Value);
-
-                using (var context = new VertikalDataEntities())
+                if (dataGridView1.SelectedRows.Count > 0)
                 {
-                    
-                    var productToDelete = context.OrderedProducts.SingleOrDefault(p => p.OrderID == id);
 
-                    if (productToDelete != null)
-                    {
-                        
-                        context.OrderedProducts.Remove(productToDelete);
-                        context.SaveChanges();
+                    int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["OrderID"].Value);
 
-                        MessageBox.Show("Törlés sikeres.");
-                    }
-                    else
+                    using (var context = new VertikalDataEntities())
                     {
-                        MessageBox.Show("A termék nem található.");
+
+                        var productToDelete = context.OrderedProducts.SingleOrDefault(p => p.OrderID == id);
+
+                        if (productToDelete != null)
+                        {
+
+                            context.OrderedProducts.Remove(productToDelete);
+                            context.SaveChanges();
+
+                            MessageBox.Show("Törlés sikeres.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("A termék nem található.");
+                        }
                     }
+
+                    DataGridViewUpdate();
                 }
+                else
+                {
+                    MessageBox.Show("Kérlek válassz ki egy sort.");
+                }
+            }
 
-                DataGridViewUpdate();
-            }
-            else
-            {
-                MessageBox.Show("Kérlek válassz ki egy sort.");
-            }
+            
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Api proxy = apiHivas();
+            try
+            {
+                Api proxy = apiHivas();
 
-            // create a new instance of a product
-            var product = new ProductDTO();
+                // create a new instance of a product
+                var product = new ProductDTO();
 
-            // populate the product object with minimal information
-            product.ProductName = "teszt";
-            product.Sku = "TP001";
-            product.SitePrice = 10000;
-            product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+                // populate the product object with minimal information
+                product.ProductName = "teszt";
+                product.Sku = "TP001";
+                product.SitePrice = 10000;
+                product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
 
-            // call the API to create the new product
-            ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
+                // call the API to create the new product
+                ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
