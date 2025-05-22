@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Hotcakes.CommerceDTO.v1;
+using Hotcakes.CommerceDTO.v1.Catalog;
+using Hotcakes.CommerceDTO.v1.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +25,15 @@ namespace KLiensApp2
             InitializeComponent();
 
 
+        }
+
+        private static Api apiHivas()
+        {
+            string url = "http://rendfejl1018.northeurope.cloudapp.azure.com/";
+            string kulcs = "1-40db881d-4fed-4469-9c36-00f257bf6789";
+
+            Api proxy = new Api(url, kulcs);
+            return proxy;
         }
 
         private void ListUpdate()
@@ -145,6 +157,23 @@ namespace KLiensApp2
                 MessageBox.Show("Kérlek válassz ki egy sort.");
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Api proxy = apiHivas();
+
+            // create a new instance of a product
+            var product = new ProductDTO();
+
+            // populate the product object with minimal information
+            product.ProductName = "teszt";
+            product.Sku = "TP001";
+            product.SitePrice = 10000;
+            product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+
+            // call the API to create the new product
+            ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
         }
     }
 }

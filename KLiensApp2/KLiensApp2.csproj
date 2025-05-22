@@ -46,6 +46,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Resources\Hotcakes.CommerceDTO.dll</HintPath>
     </Reference>
+    <Reference Include="Hotcakes.Web">
+      <HintPath>..\..\..\..\Downloads\Hotcakes.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
