@@ -189,6 +189,8 @@ namespace KLiensApp2
                         product.Sku = "KLP" + dataGridView1.CurrentRow.Cells[0].Value?.ToString();
                         product.SitePrice = raktar.Price;
                         product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+                        product.IsSearchable = true;
+                        product.StoreId = 1;
                     }
                     else
                     {
