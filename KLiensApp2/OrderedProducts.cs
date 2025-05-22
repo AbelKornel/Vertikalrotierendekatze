@@ -18,6 +18,6 @@ namespace KLiensApp2
         public string ProductName { get; set; }
         public Nullable<int> Quantity { get; set; }
 
-        public int Price { get; set; } 
+        public Nullable<int> Price { get; set; } 
     }
 }

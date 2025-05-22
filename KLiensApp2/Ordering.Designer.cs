@@ -124,9 +124,9 @@
             this.label3.Location = new System.Drawing.Point(38, 276);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(200, 25);
+            this.label3.Size = new System.Drawing.Size(89, 25);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Megrendelt mennyiség:";
+            this.label3.Text = "Egységár:";
             // 
             // textBox3
             // 

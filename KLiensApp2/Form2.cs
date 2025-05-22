@@ -181,7 +181,7 @@ namespace KLiensApp2
                 {
                     product.ProductName = dataGridView1.CurrentRow.Cells[1].Value?.ToString();
                     product.Sku = "KLP" + dataGridView1.CurrentRow.Cells[0].Value?.ToString();
-                    product.SitePrice = 10000;
+                    //product.SitePrice = dataGridView1.CurrentRow.Cells[3].Value?.ToString();
                     product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
                 }
                 else 
