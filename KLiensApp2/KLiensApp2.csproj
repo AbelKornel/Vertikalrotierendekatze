@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E8C05095-1C7E-4517-BF6F-048B10A37AC4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KLiensApp2</RootNamespace>
+    <AssemblyName>KLiensApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hotcakes.CommerceDTO, Version=3.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Hotcakes.CommerceDTO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AnonymousUsers.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Applications.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_SchemaVersions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Users.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Assemblies.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthCookies.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CKE_Settings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentItems.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentItems_MetaData.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentItems_Tags.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflowActions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflowLogs.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflows.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflowSources.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflowStatePermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContentWorkflowStates.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_MessageAttachments.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_MessageRecipients.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_Messages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_NotificationTypeActions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_NotificationTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_Subscriptions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_SubscriptionTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CoreMessaging_UserPreferences.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopModulePermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DesktopModules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DNNBCEHelloWorld_Items.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventLog.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventLogConfig.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventLogTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventQueue.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionEvents.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportImportCheckpoints.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportImportJobLogs.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportImportJobs.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExportImportSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionUrlProviderConfiguration.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionUrlProviders.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionUrlProviderSetting.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionUrlProviderTab.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Files.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FileVersions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FolderMappings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FolderMappingsSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FolderPermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Folders.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Address.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Affiliate.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_AffiliatePayments.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_AffiliateReferral.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_AnalyticsEvents.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ApiKeys.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Audit.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_AuthTokens.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_BundledProducts.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_CatalogRoles.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Category.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_CategoryTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_CategoryXProperty.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ContentBlock.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ContentBlockTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ContentColumn.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Countries.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_CountryTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_CustomUrl.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Fraud.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_GiftCard.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_HtmlTemplates.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_HtmlTemplateTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_LineItem.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_MailingList.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_MailingListMember.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Manufacturer.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_MembershipProductType.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_News.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Order.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_OrderCoupon.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_OrderNote.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_OrderPackage.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_OrderTransactions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_PriceGroup.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Product.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductFile.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductFileXProduct.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductImage.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductInventory.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductOptionItemTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductOptions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductOptionsItems.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductOptionTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductProperty.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductPropertyChoice.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductPropertyChoiceTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductPropertyTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductPropertyValue.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductPropertyValueTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductRelationships.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductReview.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductType.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductTypeTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductTypeXProductProperty.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductVolumeDiscounts.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductXCategory.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ProductXOption.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Promotions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_PromotionTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_QueuedTasks.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Regions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_RegionTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_RewardsPoints.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_RMA.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_RMAItem.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_SearchLexicon.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_SearchObjects.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_SearchObjectWords.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_SearchQuery.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ShippingMethod.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ShippingMethodTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_ShippingZones.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_StoreDomains.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Stores.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_StoreSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_StoreSettingsTranslations.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_StoresXUsers.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Taxes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_TaxSchedules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_User.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_UserAccounts.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_UserQuestions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_UserXContact.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_USGeoData.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Variants.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_Vendor.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hcc_WishListItems.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HostSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlText.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlTextLog.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlTextUsers.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IPFilter.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JavaScriptLibraries.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Access.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Comments.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Data.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Security.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_TypeFilters.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Journal_Types.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KliensDbContext2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KliensDbContext2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KliensDbContext2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KliensDbContext2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KliensDbContext2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LanguagePacks.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Languages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lists.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Messaging_Messages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MetaData.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile_PreviewProfiles.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile_RedirectionRules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile_Redirections.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleControls.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleDefinitions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModulePermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderedProducts.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering.Designer.cs">
+      <DependentUpon>Ordering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutputCache.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackageDependencies.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Packages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PackageTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordHistory.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Permission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaBarExtensions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaBarMenu.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaBarMenuDefaultPermissions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaBarMenuPermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaBarPermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalAlias.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalDesktopModules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalGroups.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalLanguages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalLocalization.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalPermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Portals.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PortalSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsToOrder.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilePropertyDefinition.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecordvilleLicitModul_Auctions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RecordvilleLicitModul_Items.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RedirectMessages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Relationships.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RelationshipTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleGroups.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RoleSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Schedule.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleHistory.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ScheduleItemSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCommonWords.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchDeletedItems.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchIndexer.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStopWords.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SearchTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SiteLog.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SkinControls.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SkinPackages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Skins.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SQLQueries.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SynonymsGroups.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMessages.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabAliasSkins.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabModules.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabModuleSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabPermission.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tabs.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabSettings.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabUrls.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabVersionDetails.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TabVersions.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Taxonomy_ScopeTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Taxonomy_Terms.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Taxonomy_Vocabularies.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Taxonomy_VocabularyTypes.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrlLog.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Urls.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UrlTracking.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserAuthentication.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserPortals.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRelationshipPreferences.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRelationships.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRoles.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsersOnline.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Version.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebServers.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="wns_inj_injection.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Workflow.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WorkflowStates.cs">
+      <DependentUpon>KliensDbContext2.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering.resx">
+      <DependentUpon>Ordering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="KliensDbContext2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>KliensDbContext2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="KliensDbContext2.edmx.diagram">
+      <DependentUpon>KliensDbContext2.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="KliensDbContext2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KliensDbContext2.edmx</DependentUpon>
+      <LastGenOutput>KliensDbContext2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="KliensDbContext2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>KliensDbContext2.edmx</DependentUpon>
+      <LastGenOutput>KliensDbContext2.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\istockphoto-1364418134-612x612.jpg" />
+    <None Include="Resources\Hotcakes.CommerceDTO.dll" />
+    <None Include="Resources\favicon.ico" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\59e1a342800901942d697eb6c00c09ab - Edited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>

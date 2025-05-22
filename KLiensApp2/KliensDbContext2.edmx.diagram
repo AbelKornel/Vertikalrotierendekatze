@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="459c8234d6c048e39a7de02b7988cbc5" Name="Diagram1">
+        <EntityTypeShape EntityType="VertikalDataModel.AnonymousUsers" Width="1.5" PointX="3" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.aspnet_Applications" Width="1.5" PointX="32.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.aspnet_Membership" Width="1.5" PointX="37.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.aspnet_SchemaVersions" Width="1.5" PointX="2.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.aspnet_Users" Width="1.5" PointX="35" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Assemblies" Width="1.5" PointX="8.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.AuthCookies" Width="1.5" PointX="12.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Authentication" Width="1.5" PointX="8.5" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CKE_Settings" Width="1.5" PointX="12.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentItems" Width="1.5" PointX="10.75" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentItems_MetaData" Width="1.5" PointX="13" PointY="53.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentItems_Tags" Width="1.5" PointX="13" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflowActions" Width="1.5" PointX="10.75" PointY="58.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflowLogs" Width="1.5" PointX="13" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflows" Width="1.5" PointX="8" PointY="60.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflowSources" Width="1.5" PointX="10.25" PointY="62.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflowStatePermission" Width="1.5" PointX="17.5" PointY="71.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentWorkflowStates" Width="1.5" PointX="8.5" PointY="51.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ContentTypes" Width="1.5" PointX="8.5" PointY="57" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_MessageAttachments" Width="1.5" PointX="15.25" PointY="102.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_MessageRecipients" Width="1.5" PointX="15.25" PointY="105.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_Messages" Width="1.5" PointX="13" PointY="103.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_NotificationTypeActions" Width="1.5" PointX="13" PointY="110.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_NotificationTypes" Width="1.5" PointX="10.75" PointY="106.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_Subscriptions" Width="1.5" PointX="6" PointY="78.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_SubscriptionTypes" Width="1.5" PointX="3.75" PointY="88.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.CoreMessaging_UserPreferences" Width="1.5" PointX="15.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.DesktopModulePermission" Width="1.5" PointX="7.5" PointY="89.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.DesktopModules" Width="1.5" PointX="8.5" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.DNNBCEHelloWorld_Items" Width="1.5" PointX="5.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.EventLog" Width="1.5" PointX="13.25" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.EventLogConfig" Width="1.5" PointX="11" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.EventLogTypes" Width="1.5" PointX="8.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.EventQueue" Width="1.5" PointX="27.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExceptionEvents" Width="1.5" PointX="15.5" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Exceptions" Width="1.5" PointX="24.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExportImportCheckpoints" Width="1.5" PointX="30" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExportImportJobLogs" Width="1.5" PointX="30" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExportImportJobs" Width="1.5" PointX="27.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExportImportSettings" Width="1.5" PointX="5.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExtensionUrlProviderConfiguration" Width="1.5" PointX="5.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExtensionUrlProviders" Width="1.5" PointX="29.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExtensionUrlProviderSetting" Width="1.5" PointX="0.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ExtensionUrlProviderTab" Width="1.5" PointX="13.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Files" Width="1.5" PointX="8" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.FileVersions" Width="1.5" PointX="10.25" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.FolderMappings" Width="1.5" PointX="3" PointY="66.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.FolderMappingsSettings" Width="1.5" PointX="5.25" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.FolderPermission" Width="1.5" PointX="14.5" PointY="86.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Folders" Width="1.5" PointX="10.25" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Address" Width="1.5" PointX="5.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Affiliate" Width="1.5" PointX="22.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_AffiliatePayments" Width="1.5" PointX="25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_AffiliateReferral" Width="1.5" PointX="25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_AnalyticsEvents" Width="1.5" PointX="15.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ApiKeys" Width="1.5" PointX="33.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Audit" Width="1.5" PointX="30.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_AuthTokens" Width="1.5" PointX="6" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_BundledProducts" Width="1.5" PointX="25.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_CatalogRoles" Width="1.5" PointX="20" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Category" Width="1.5" PointX="17.75" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_CategoryTranslations" Width="1.5" PointX="20" PointY="45.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_CategoryXProperty" Width="1.5" PointX="35.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ContentBlock" Width="1.5" PointX="23" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ContentBlockTranslations" Width="1.5" PointX="25.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ContentColumn" Width="1.5" PointX="20.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Countries" Width="1.5" PointX="15.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_CountryTranslations" Width="1.5" PointX="18" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_CustomUrl" Width="1.5" PointX="32.75" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Fraud" Width="1.5" PointX="35.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_GiftCard" Width="1.5" PointX="35.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_HtmlTemplates" Width="1.5" PointX="32.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_HtmlTemplateTranslations" Width="1.5" PointX="35" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_LineItem" Width="1.5" PointX="3" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_MailingList" Width="1.5" PointX="19.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_MailingListMember" Width="1.5" PointX="22" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Manufacturer" Width="1.5" PointX="20.75" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_MembershipProductType" Width="1.5" PointX="20" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_News" Width="1.5" PointX="17.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Order" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_OrderCoupon" Width="1.5" PointX="3" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_OrderNote" Width="1.5" PointX="3" PointY="54.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_OrderPackage" Width="1.5" PointX="3" PointY="57.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_OrderTransactions" Width="1.5" PointX="3" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_PriceGroup" Width="1.5" PointX="37.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Product" Width="1.5" PointX="23" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductFile" Width="1.5" PointX="26" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductFileXProduct" Width="1.5" PointX="28.25" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductImage" Width="1.5" PointX="25.25" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductInventory" Width="1.5" PointX="25.25" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductOptionItemTranslations" Width="1.5" PointX="33.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductOptions" Width="1.5" PointX="29" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductOptionsItems" Width="1.5" PointX="31.25" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductOptionTranslations" Width="1.5" PointX="31.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductProperty" Width="1.5" PointX="17.75" PointY="25.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductPropertyChoice" Width="1.5" PointX="20" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductPropertyChoiceTranslations" Width="1.5" PointX="22.25" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductPropertyTranslations" Width="1.5" PointX="20" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductPropertyValue" Width="1.5" PointX="28.25" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductPropertyValueTranslations" Width="1.5" PointX="30.5" PointY="28.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductRelationships" Width="1.5" PointX="25.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductReview" Width="1.5" PointX="25.25" PointY="38.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductTranslations" Width="1.5" PointX="25.25" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductVolumeDiscounts" Width="1.5" PointX="25.25" PointY="47.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductXCategory" Width="1.5" PointX="28.25" PointY="36.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductXOption" Width="1.5" PointX="31.25" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductType" Width="1.5" PointX="17.75" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductTypeTranslations" Width="1.5" PointX="20" PointY="70.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ProductTypeXProductProperty" Width="1.5" PointX="20" PointY="26.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Promotions" Width="1.5" PointX="33.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_PromotionTranslations" Width="1.5" PointX="36" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_QueuedTasks" Width="1.5" PointX="37.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Regions" Width="1.5" PointX="18" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_RegionTranslations" Width="1.5" PointX="20.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_RewardsPoints" Width="1.5" PointX="37.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_RMA" Width="1.5" PointX="3" PointY="135.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_RMAItem" Width="1.5" PointX="5.25" PointY="135.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_SearchLexicon" Width="1.5" PointX="10.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_SearchObjects" Width="1.5" PointX="10.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_SearchObjectWords" Width="1.5" PointX="13" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_SearchQuery" Width="1.5" PointX="37.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ShippingMethod" Width="1.5" PointX="32.75" PointY="27.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ShippingMethodTranslations" Width="1.5" PointX="35" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_ShippingZones" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_StoreDomains" Width="1.5" PointX="37.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Stores" Width="1.5" PointX="0.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_StoreSettings" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_StoreSettingsTranslations" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_StoresXUsers" Width="1.5" PointX="6" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Taxes" Width="1.5" PointX="5.25" PointY="22" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_TaxSchedules" Width="1.5" PointX="3" PointY="28.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_User" Width="1.5" PointX="33.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_UserAccounts" Width="1.5" PointX="3.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_UserQuestions" Width="1.5" PointX="37.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_UserXContact" Width="1.5" PointX="36" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_USGeoData" Width="1.5" PointX="37.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Variants" Width="1.5" PointX="25.25" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_Vendor" Width="1.5" PointX="20.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.hcc_WishListItems" Width="1.5" PointX="25.25" PointY="60.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.HostSettings" Width="1.5" PointX="27.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.HtmlText" Width="1.5" PointX="15.25" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.HtmlTextLog" Width="1.5" PointX="17.5" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.HtmlTextUsers" Width="1.5" PointX="17.5" PointY="46.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.IPFilter" Width="1.5" PointX="38.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.JavaScriptLibraries" Width="1.5" PointX="8.5" PointY="32.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal" Width="1.5" PointX="11" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_Access" Width="1.5" PointX="29.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_Comments" Width="1.5" PointX="13.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_Data" Width="1.5" PointX="13.25" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_Security" Width="1.5" PointX="38.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_TypeFilters" Width="1.5" PointX="37.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Journal_Types" Width="1.5" PointX="8.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.LanguagePacks" Width="1.5" PointX="8.5" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Languages" Width="1.5" PointX="3.75" PointY="119.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Lists" Width="1.5" PointX="39.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Messaging_Messages" Width="1.5" PointX="39.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.MetaData" Width="1.5" PointX="10.75" PointY="49.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Mobile_PreviewProfiles" Width="1.5" PointX="3" PointY="70.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Mobile_RedirectionRules" Width="1.5" PointX="5.25" PointY="75.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Mobile_Redirections" Width="1.5" PointX="3" PointY="74.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ModuleControls" Width="1.5" PointX="13" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ModuleDefinitions" Width="1.5" PointX="10.75" PointY="44.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ModulePermission" Width="1.5" PointX="7.5" PointY="97.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Modules" Width="1.5" PointX="13" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ModuleSettings" Width="1.5" PointX="15.25" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.OrderedProducts" Width="1.5" PointX="39.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.OutputCache" Width="1.5" PointX="39.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PackageDependencies" Width="1.5" PointX="8.5" PointY="39.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Packages" Width="1.5" PointX="6.25" PointY="42.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PackageTypes" Width="1.5" PointX="4" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PasswordHistory" Width="1.5" PointX="8" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Permission" Width="1.5" PointX="12.25" PointY="88.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PersonaBarExtensions" Width="1.5" PointX="9" PointY="116.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PersonaBarMenu" Width="1.5" PointX="6.75" PointY="104.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PersonaBarMenuDefaultPermissions" Width="1.5" PointX="9" PointY="102.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PersonaBarMenuPermission" Width="1.5" PointX="9" PointY="78.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PersonaBarPermission" Width="1.5" PointX="6.75" PointY="118.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalAlias" Width="1.5" PointX="3" PointY="84" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalDesktopModules" Width="1.5" PointX="3" PointY="79.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalGroups" Width="1.5" PointX="39.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalLanguages" Width="1.5" PointX="6" PointY="83.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalLocalization" Width="1.5" PointX="3" PointY="95.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalPermission" Width="1.5" PointX="9" PointY="83.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Portals" Width="1.5" PointX="0.75" PointY="71.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.PortalSettings" Width="1.5" PointX="3" PointY="106.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ProductsToOrder" Width="1.5" PointX="22.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Profile" Width="1.5" PointX="12" PointY="77.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ProfilePropertyDefinition" Width="1.5" PointX="3" PointY="113.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RecordvilleLicitModul_Auctions" Width="1.5" PointX="31" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RecordvilleLicitModul_Items" Width="1.5" PointX="28.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RedirectMessages" Width="1.5" PointX="39.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Relationships" Width="1.5" PointX="12" PointY="80.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RelationshipTypes" Width="1.5" PointX="9.75" PointY="87.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RoleGroups" Width="1.5" PointX="3" PointY="123.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Roles" Width="1.5" PointX="5.25" PointY="95.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.RoleSettings" Width="1.5" PointX="31.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Schedule" Width="1.5" PointX="15.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ScheduleHistory" Width="1.5" PointX="18" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.ScheduleItemSettings" Width="1.5" PointX="18" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SearchCommonWords" Width="1.5" PointX="39.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SearchDeletedItems" Width="1.5" PointX="33.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SearchIndexer" Width="1.5" PointX="31.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SearchStopWords" Width="1.5" PointX="39.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SearchTypes" Width="1.5" PointX="40.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SiteLog" Width="1.5" PointX="3" PointY="127.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SkinControls" Width="1.5" PointX="8.5" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SkinPackages" Width="1.5" PointX="8.5" PointY="111.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Skins" Width="1.5" PointX="10.75" PointY="112.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SQLQueries" Width="1.5" PointX="40.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SynonymsGroups" Width="1.5" PointX="39.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.sysdiagrams" Width="1.5" PointX="41.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.SystemMessages" Width="1.5" PointX="3" PointY="131.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabAliasSkins" Width="1.5" PointX="0.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabModules" Width="1.5" PointX="15.25" PointY="65.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabModuleSettings" Width="1.5" PointX="17.5" PointY="68" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabPermission" Width="1.5" PointX="20.25" PointY="82.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Tabs" Width="1.5" PointX="13" PointY="66.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabSettings" Width="1.5" PointX="15.25" PointY="74.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabUrls" Width="1.5" PointX="15.25" PointY="77.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabVersionDetails" Width="1.5" PointX="17.5" PointY="82.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.TabVersions" Width="1.5" PointX="15.25" PointY="82.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Taxonomy_ScopeTypes" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Taxonomy_Terms" Width="1.5" PointX="10.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Taxonomy_Vocabularies" Width="1.5" PointX="8" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Taxonomy_VocabularyTypes" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UrlLog" Width="1.5" PointX="5.25" PointY="149.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Urls" Width="1.5" PointX="3" PointY="146.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UrlTracking" Width="1.5" PointX="3" PointY="148.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserAuthentication" Width="1.5" PointX="8" PointY="123.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserPortals" Width="1.5" PointX="8" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserProfile" Width="1.5" PointX="5.25" PointY="114.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserRelationshipPreferences" Width="1.5" PointX="18.25" PointY="77.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserRelationships" Width="1.5" PointX="17.25" PointY="86.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UserRoles" Width="1.5" PointX="10.5" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Users" Width="1.5" PointX="5.75" PointY="57.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.UsersOnline" Width="1.5" PointX="12" PointY="85.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Version" Width="1.5" PointX="41.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.WebServers" Width="1.5" PointX="41.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.wns_inj_injection" Width="1.5" PointX="15.25" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.Workflow" Width="1.5" PointX="10.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VertikalDataModel.WorkflowStates" Width="1.5" PointX="13" PointY="39.875" IsExpanded="true" />
+        <AssociationConnector Association="VertikalDataModel.FK_AnonymousUsers_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK__aspnet_Me__Appli__2C09769E" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK__aspnet_Us__Appli__1BD30ED5" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK__aspnet_Me__UserI__2CFD9AD7" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PackageAssemblies_PackageAssemblies" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Authentication_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_ContentWorkflowStates" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_ContentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_MetaData_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_Tags_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowLogs_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Files_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Modules_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Tabs_ContentItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_MetaDataMetaData" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentItems_Tags_Taxonomy_Terms" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowActions_ContentTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowLogs_ContentWorkflows" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowSources_ContentWorkflows" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowStates_ContentWorkflows" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Folders_ContentWorkflows" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowStatePermission_ContentWorkflowStates" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowStatePermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ContentWorkflowStatePermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_MessageAttachments_CoreMessaging_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_MessageRecipients_CoreMessaging_Messages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_Messages_CoreMessaging_NotificationTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_NotificationTypeActions_CoreMessaging_NotificationTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_NotificationTypes_DesktopModules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_Subscriptions_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_Subscriptions_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_Subscriptions_Subscriptions_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_CoreMessaging_Subscriptions_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_DesktopModulePermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_DesktopModulePermission_PortalDesktopModules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_DesktopModulePermission_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_DesktopModulePermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_DesktopModules_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModuleDefinitions_DesktopModules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalDesktopModules_DesktopModules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_EventLog_EventLogConfig" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_EventLog_EventLogTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ExceptionEvents_LogEventId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_EventLogConfig_EventLogTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ExportImportCheckpoints_JobId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ExportImportJobLogs_JobId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Files_Folders" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Files_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FileVersions_Files" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderMappings_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderMappingsSettings_FolderMappings" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Folders_FolderMappings" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderPermission_Folders" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderPermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderPermission_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_FolderPermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Folders_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_AffiliatePayments_hcc_Affiliate" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_AffiliateReferral_hcc_Affiliate" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_AuthTokens_hcc_UserAccounts" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_BundledProducts_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_CatalogRoles_hcc_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_CatalogRoles_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_CatalogRoles_hcc_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_CategoryTranslations_hcc_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductXCategory_hcc_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ContentBlock_hcc_ContentColumn" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ContentBlockTranslations_hcc_ContentBlock" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_CountryTranslations_hcc_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Regions_hcc_Countries" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_HtmlTemplateTranslations_hcc_HtmlTemplates" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_LineItem_hcc_LineItem" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_MailingListMember_hcc_MailingList" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Product_hcc_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_MembershipProductType_hcc_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_OrderCoupon_hcc_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_OrderNote_hcc_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_OrderPackage_hcc_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_OrderTransactions_hcc_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_RMA_hcc_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_OrderTransactions_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Product_hcc_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Product_hcc_Vendor" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductFileXProduct_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductImage_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductInventory_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyValue_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductRelationships_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductReview_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductTranslations_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductVolumeDiscounts_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductXCategory_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductXOption_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Variants_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_WishListItems_hcc_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductFileXProduct_hcc_ProductFile" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductOptionItemTranslations_hcc_ProductOptionsItems" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductOptionsItems_hcc_ProductOptions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductOptionTranslations_hcc_ProductOptions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductXOption_hcc_ProductOptions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyChoice_hcc_ProductProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyTranslations_hcc_ProductProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyValue_hcc_ProductProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductTypeXProductProperty_hcc_ProductProperty" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyChoiceTranslations_hcc_ProductPropertyChoice" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductPropertyValueTranslations_hcc_ProductPropertyValue" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductTypeProperties_hcc_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ProductTypeTranslations_hcc_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_PromotionTranslations_hcc_Promotions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_RegionTranslations_hcc_Regions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_RMAItem_hcc_RMA" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_SearchObjectWords_hcc_SearchLexicon" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_SearchObjectWords_hcc_SearchObjects" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ShippingMethodTranslations_hcc_ShippingMethodTranslations" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_ShippingZones_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_StoreSettings_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_StoresXUsers_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Taxes_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_TaxSchedules_hcc_Stores" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_StoreSettingsTranslations_hcc_StoreSettings" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_StoresXUsers_hcc_UserAccounts" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_Taxes_hcc_TaxSchedules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_hcc_UserXAffiliate_hcc_User" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_HtmlText_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_HtmlText_WorkflowStates" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_HtmlTextLog_HtmlText" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_HtmlTextUsers_HtmlText" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_HtmlTextLog_WorkflowStates" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_JavaScriptLibrariesPackages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Journal_Data_Journal" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Journal_JournalTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_JournalComments_Journal" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_LanguagePacks_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalLanguages_PortalLanguages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Mobile_PreviewProfiles_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Mobile_RedirectionRules_Mobile_Redirections" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Mobile_Redirections_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModuleControls_ModuleDefinitions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Modules_ModuleDefinitions" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModulePermission_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModulePermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModulePermission_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModulePermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ModuleSettings_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabModules_Modules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_wns_inj_injection_moduleid" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PackageDependencies_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Packages_PackageTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_SkinControls_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_SkinPackages_Packages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PasswordHistory_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalPermission_PermissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabPermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarExtensions_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenu_ParentId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuDefaultPermissions_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuPermission_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarPermission_MenuId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuPermission_Permission" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuPermission_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuPermission_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PersonaBarMenuPermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalAlias_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalDesktopModules_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalLanguages_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalLocalization_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalPermission_PortalId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalPermission_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalPermission_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_PortalSettings_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Profile_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ProfilePropertyDefinition_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Relationships_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_RoleGroups_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Roles_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_SiteLog_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_SystemMessages_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Tabs_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Urls_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UrlTracking_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserPortals_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UsersOnline_Portals" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Profile_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserProfile_ProfilePropertyDefinition" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK__Recordvil__ItemI__4203A4B5" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Relationships_RelationshipTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Relationships_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRelationshipPreferences_Relationships" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRelationships_Relationships" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Roles_RoleGroups" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabPermission_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRoles_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ScheduleHistory_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_ScheduleItemSettings_Schedule" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Skins_SkinPackages" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabModules_Tabs" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabModuleSettings_TabModules" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabPermission_Tabs" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabPermission_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Tabs_Tabs" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabSettings_Tabs" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabUrls_Tabs" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabVersions_TabId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_TabVersionDetails_TabVersionId" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Taxonomy_Vocabularies_Taxonomy_ScopeTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Taxonomy_Terms_Taxonomy_Terms" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Taxonomy_Terms_Taxonomy_Vocabularies" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_Taxonomy_Vocabularies_Taxonomy_VocabularyTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UrlLog_UrlTracking" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserAuthentication_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserPortals_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserProfile_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRelationshipPreferences_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRelationships_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRelationships_Users_OnRelatedUser" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UserRoles_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_UsersOnline_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="VertikalDataModel.FK_WorkflowStates_Workflow" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

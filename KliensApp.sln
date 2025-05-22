@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KliensApp", "KliensApp\Klie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KliensApp.UnitTests", "KliensApp.UnitTests\KliensApp.UnitTests.csproj", "{40A4A031-F50A-482A-AFC9-6CDFAF6730AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KLiensApp2", "KLiensApp2\KLiensApp2.csproj", "{E8C05095-1C7E-4517-BF6F-048B10A37AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{40A4A031-F50A-482A-AFC9-6CDFAF6730AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40A4A031-F50A-482A-AFC9-6CDFAF6730AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40A4A031-F50A-482A-AFC9-6CDFAF6730AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C05095-1C7E-4517-BF6F-048B10A37AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C05095-1C7E-4517-BF6F-048B10A37AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C05095-1C7E-4517-BF6F-048B10A37AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C05095-1C7E-4517-BF6F-048B10A37AC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
