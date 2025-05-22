@@ -135,8 +135,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(448, 26);
             this.textBox3.TabIndex = 12;
-            this.textBox3.Validating += new System.ComponentModel.CancelEventHandler(this.textBox3_Validating);
-            this.textBox3.Validated += new System.EventHandler(this.textBox3_Validated);
+            
             // 
             // Ordering
             // 

@@ -15,7 +15,7 @@ namespace KLiensApp2
     {
         public string Name { get; set; }
         public int Quantity { get; set; }
-        public int Price { get; set; } 
+       
 
         public Ordering()
         {
@@ -37,7 +37,7 @@ namespace KLiensApp2
         {
             Name = textBox1.Text;
             Quantity = Convert.ToInt32(textBox2.Text);
-            Price = Convert.ToInt32(textBox3.Text);
+            
 
             if (this.ValidateChildren())
                 this.DialogResult = DialogResult.OK;
@@ -78,7 +78,7 @@ namespace KLiensApp2
             }
         }
 
-        private void textBox3_Validated(object sender, EventArgs e)
+        /*private void textBox3_Validated(object sender, EventArgs e)
         {
             errorProvider1.SetError(textBox3, "");
         }
@@ -90,6 +90,6 @@ namespace KLiensApp2
                 e.Cancel = true;
                 errorProvider1.SetError(textBox3, "Kérlek konkrét szám értéket adj meg!");
             }
-        }
+        }*/
     }
 }
