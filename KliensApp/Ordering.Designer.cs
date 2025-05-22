@@ -46,9 +46,10 @@
             button1.BackColor = Color.Brown;
             button1.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(52, 277);
+            button1.Location = new Point(35, 168);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(78, 46);
             button1.TabIndex = 0;
             button1.Text = "OK";
             button1.UseVisualStyleBackColor = false;
@@ -61,9 +62,10 @@
             button2.CausesValidation = false;
             button2.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(260, 277);
+            button2.Location = new Point(184, 168);
+            button2.Margin = new Padding(2, 2, 2, 2);
             button2.Name = "button2";
-            button2.Size = new Size(112, 34);
+            button2.Size = new Size(78, 46);
             button2.TabIndex = 1;
             button2.Text = "Mégse";
             button2.UseVisualStyleBackColor = false;
@@ -73,9 +75,10 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            label1.Location = new Point(30, 39);
+            label1.Location = new Point(21, 23);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(284, 25);
+            label1.Size = new Size(198, 18);
             label1.TabIndex = 2;
             label1.Text = "Megrendelt termék megnevezése:";
             // 
@@ -83,26 +86,29 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Impact", 10F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            label2.Location = new Point(30, 154);
+            label2.Location = new Point(21, 92);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(200, 25);
+            label2.Size = new Size(140, 18);
             label2.TabIndex = 3;
             label2.Text = "Megrendelt mennyiség:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(30, 81);
+            textBox1.Location = new Point(21, 49);
+            textBox1.Margin = new Padding(2, 2, 2, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(373, 31);
+            textBox1.Size = new Size(262, 23);
             textBox1.TabIndex = 4;
             textBox1.Validating += textBox1_Validating;
             textBox1.Validated += textBox1_Validated;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(30, 201);
+            textBox2.Location = new Point(21, 121);
+            textBox2.Margin = new Padding(2, 2, 2, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(373, 31);
+            textBox2.Size = new Size(262, 23);
             textBox2.TabIndex = 5;
             textBox2.Validating += textBox2_Validating;
             textBox2.Validated += textBox2_Validated;
@@ -113,10 +119,10 @@
             // 
             // Ordering
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(459, 344);
+            ClientSize = new Size(321, 259);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label2);
@@ -124,6 +130,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Ordering";
             Text = "Ordering";
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
