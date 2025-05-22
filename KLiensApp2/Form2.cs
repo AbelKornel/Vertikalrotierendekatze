@@ -9,6 +9,7 @@ using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace KLiensApp2
 {
@@ -90,46 +91,42 @@ namespace KLiensApp2
 
             if (ordering.ShowDialog() == DialogResult.OK)
             {
-                string name = ordering.Name;
-                int db = ordering.Quantity;
 
-                /*OrderedProducts newOrderedProduct = new OrderedProducts();
-                newOrderedProduct.Quantity = db;
-                newOrderedProduct.ProductName = name;
+                OrderedProducts newOrderedProduct = new OrderedProducts();
+                newOrderedProduct.Quantity = ordering.Quantity;
+                newOrderedProduct.ProductName = ordering.Name;
 
-                _context.OrderedProducts.Add(newOrderedProduct);
-                _context.SaveChanges();*/
-                using (var context = new VertikalDataEntities())
+                _context.OrderedProducts.Local.Add(newOrderedProduct);
+                try
                 {
-                    var newOrderedProduct = new OrderedProducts
-                    {
-                        ProductName = name,
-                        Quantity = db
-                    };
-
-                    context.OrderedProducts.Add(newOrderedProduct);
-                    context.SaveChanges();
+                    _context.SaveChanges();
+                    MessageBox.Show("eljut ide?");
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                DataGridViewUpdate(); 
 
             }
-            DataGridViewUpdate();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                // Kiválasztott sor ID-jének lekérdezése
+                
                 int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["OrderID"].Value);
 
                 using (var context = new VertikalDataEntities())
                 {
-                    // Az entitás lekérdezése az ID alapján
+                    
                     var productToDelete = context.OrderedProducts.SingleOrDefault(p => p.OrderID == id);
 
                     if (productToDelete != null)
                     {
-                        // Törlés az adatbázisból
+                        
                         context.OrderedProducts.Remove(productToDelete);
                         context.SaveChanges();
 

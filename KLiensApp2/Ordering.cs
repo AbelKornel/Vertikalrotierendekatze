@@ -33,17 +33,18 @@ namespace KLiensApp2
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
             Name = textBox1.Text;
             Quantity = Convert.ToInt32(textBox2.Text);
 
             if (this.ValidateChildren())
                 this.DialogResult = DialogResult.OK;
+            
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
 
         private void textBox1_Validated_1(object sender, EventArgs e)
