@@ -108,7 +108,7 @@ namespace KLiensApp2
                 OrderedProducts newOrderedProduct = new OrderedProducts();
                 newOrderedProduct.Quantity = ordering.Quantity;
                 newOrderedProduct.ProductName = ordering.Name;
-                newOrderedProduct.Price = ordering.Price;
+                
 
                 _context.OrderedProducts.Local.Add(newOrderedProduct);
                 try
@@ -169,34 +169,50 @@ namespace KLiensApp2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            StoreProduct raktar = new StoreProduct();
+
+
+            if (raktar.ShowDialog() == DialogResult.OK)
             {
-                Api proxy = apiHivas();
 
-                // create a new instance of a product
-                var product = new ProductDTO();
+                try
+                {
+                    Api proxy = apiHivas();
 
-                // populate the product object with minimal information
-                if (dataGridView1.SelectedRows.Count > 0)
-                {
-                    product.ProductName = dataGridView1.CurrentRow.Cells[1].Value?.ToString();
-                    product.Sku = "KLP" + dataGridView1.CurrentRow.Cells[0].Value?.ToString();
-                    //product.SitePrice = dataGridView1.CurrentRow.Cells[3].Value?.ToString();
-                    product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
-                }
-                else 
-                {
-                    MessageBox.Show("Kérlek válassz ki egy sort!");
-                }
+                    // create a new instance of a product
+                    var product = new ProductDTO();
+
+                    // populate the product object with minimal information
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        product.ProductName = dataGridView1.CurrentRow.Cells[1].Value?.ToString();
+                        product.Sku = "KLP" + dataGridView1.CurrentRow.Cells[0].Value?.ToString();
+                        product.SitePrice = raktar.Price;
+                        product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+                        product.IsSearchable = true;
+                        product.StoreId = 1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kérlek válassz ki egy sort!");
+                    }
 
 
                     // call the API to create the new product
                     ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+
+
+
+
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            
         }
     }
 }
