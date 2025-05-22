@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,12 +15,12 @@ namespace KLiensApp2
     public partial class Form2 : Form
     {
         VertikalDataEntities _context = new VertikalDataEntities();
-        
+
         public Form2()
         {
             InitializeComponent();
 
-           
+
         }
 
         private void ListUpdate()
@@ -78,10 +79,75 @@ namespace KLiensApp2
             comboBox1.DataSource = ker.ToList();
             comboBox1.DisplayMember = "QueryPhrase";
 
-
             ListUpdate();
             DataGridViewUpdate();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ordering ordering = new Ordering();
+
+
+            if (ordering.ShowDialog() == DialogResult.OK)
+            {
+                string name = ordering.Name;
+                int db = ordering.Quantity;
+
+                /*OrderedProducts newOrderedProduct = new OrderedProducts();
+                newOrderedProduct.Quantity = db;
+                newOrderedProduct.ProductName = name;
+
+                _context.OrderedProducts.Add(newOrderedProduct);
+                _context.SaveChanges();*/
+                using (var context = new VertikalDataEntities())
+                {
+                    var newOrderedProduct = new OrderedProducts
+                    {
+                        ProductName = name,
+                        Quantity = db
+                    };
+
+                    context.OrderedProducts.Add(newOrderedProduct);
+                    context.SaveChanges();
+                }
+
+            }
+            DataGridViewUpdate();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Kiválasztott sor ID-jének lekérdezése
+                int id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["OrderID"].Value);
+
+                using (var context = new VertikalDataEntities())
+                {
+                    // Az entitás lekérdezése az ID alapján
+                    var productToDelete = context.OrderedProducts.SingleOrDefault(p => p.OrderID == id);
+
+                    if (productToDelete != null)
+                    {
+                        // Törlés az adatbázisból
+                        context.OrderedProducts.Remove(productToDelete);
+                        context.SaveChanges();
+
+                        MessageBox.Show("Törlés sikeres.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("A termék nem található.");
+                    }
+                }
+
+                DataGridViewUpdate();
+            }
+            else
+            {
+                MessageBox.Show("Kérlek válassz ki egy sort.");
+            }
+
+        }
     }
-    
 }

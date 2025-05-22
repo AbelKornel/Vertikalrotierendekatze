@@ -90,6 +90,7 @@
             this.button1.Size = new System.Drawing.Size(105, 91);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
@@ -124,6 +125,7 @@
             this.button3.TabIndex = 7;
             this.button3.Text = "Rendelés törlése";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
