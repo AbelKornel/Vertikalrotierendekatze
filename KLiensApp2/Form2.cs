@@ -1,6 +1,7 @@
 ﻿using Hotcakes.CommerceDTO.v1;
 using Hotcakes.CommerceDTO.v1.Catalog;
 using Hotcakes.CommerceDTO.v1.Client;
+using Hotcakes.CommerceDTO.v1.Shipping;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -107,12 +108,13 @@ namespace KLiensApp2
                 OrderedProducts newOrderedProduct = new OrderedProducts();
                 newOrderedProduct.Quantity = ordering.Quantity;
                 newOrderedProduct.ProductName = ordering.Name;
+                newOrderedProduct.Price = ordering.Price;
 
                 _context.OrderedProducts.Local.Add(newOrderedProduct);
                 try
                 {
                     _context.SaveChanges();
-                    MessageBox.Show("eljut ide?");
+                    
                 }
                 catch (Exception ex)
                 {
@@ -175,13 +177,21 @@ namespace KLiensApp2
                 var product = new ProductDTO();
 
                 // populate the product object with minimal information
-                product.ProductName = "teszt";
-                product.Sku = "TP001";
-                product.SitePrice = 10000;
-                product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+                if (dataGridView1.SelectedRows.Count > 0)
+                {
+                    product.ProductName = dataGridView1.CurrentRow.Cells[1].Value?.ToString();
+                    product.Sku = "KLP" + dataGridView1.CurrentRow.Cells[0].Value?.ToString();
+                    product.SitePrice = 10000;
+                    product.InventoryMode = ProductInventoryModeDTO.AlwayInStock;
+                }
+                else 
+                {
+                    MessageBox.Show("Kérlek válassz ki egy sort!");
+                }
 
-                // call the API to create the new product
-                ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
+
+                    // call the API to create the new product
+                    ApiResponse<ProductDTO> response = proxy.ProductsCreate(product, null);
             }
             catch (Exception ex)
             {
