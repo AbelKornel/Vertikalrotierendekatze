@@ -15,6 +15,8 @@ namespace KLiensApp2
     {
         public string Name { get; set; }
         public int Quantity { get; set; }
+        public int Price { get; set; } 
+
         public Ordering()
         {
             InitializeComponent();
@@ -25,16 +27,17 @@ namespace KLiensApp2
             return !string.IsNullOrEmpty(név);
         }
 
-        private bool CheckDB(string darab)
+        private bool CheckNumber(string szam)
         {
             Regex r = new Regex("^\\d+$");
-            return r.IsMatch(darab);
+            return r.IsMatch(szam);
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
             Name = textBox1.Text;
             Quantity = Convert.ToInt32(textBox2.Text);
+            Price = Convert.ToInt32(textBox3.Text);
 
             if (this.ValidateChildren())
                 this.DialogResult = DialogResult.OK;
@@ -68,10 +71,24 @@ namespace KLiensApp2
 
         private void textBox2_Validating_1(object sender, CancelEventArgs e)
         {
-            if (!CheckDB(textBox2.Text))
+            if (!CheckNumber(textBox2.Text))
             {
                 e.Cancel = true;
                 errorProvider1.SetError(textBox2, "Kérlek konkrét darabszámot adj meg!");
+            }
+        }
+
+        private void textBox3_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(textBox3, "");
+        }
+
+        private void textBox3_Validating(object sender, CancelEventArgs e)
+        {
+            if (!CheckNumber(textBox3.Text))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(textBox3, "Kérlek konkrét szám értéket adj meg!");
             }
         }
     }
