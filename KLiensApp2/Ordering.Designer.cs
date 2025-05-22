@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ordering));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -68,6 +71,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -80,6 +84,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Mégse";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // textBox1
             // 
@@ -87,6 +92,8 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(300, 20);
             this.textBox1.TabIndex = 9;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.textBox1_Validating_1);
+            this.textBox1.Validated += new System.EventHandler(this.textBox1_Validated_1);
             // 
             // textBox2
             // 
@@ -94,6 +101,13 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(300, 20);
             this.textBox2.TabIndex = 10;
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.textBox2_Validating_1);
+            this.textBox2.Validated += new System.EventHandler(this.textBox2_Validated_1);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
+            this.errorProvider1.ContainerControl = this;
             // 
             // Ordering
             // 
@@ -110,6 +124,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Ordering";
             this.Text = "Ordering";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +138,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
