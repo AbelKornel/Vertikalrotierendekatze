@@ -44,7 +44,7 @@ A KLiensApp2 alkalmazáshoz az alábbi teszt osztályokat hoztam létre:
 4. ProductsToOrderTests - A ProductsToOrder modell tesztelése
 5. StoreProductTests - A StoreProduct űrlap és validáció tesztelése
 
-Összesen 15 tesztesetet írtam a projektben, amelyek mindegyike
+Összesen 19 tesztesetet írtam a projektben, amelyek mindegyike
 egy-egy kisebb funkcionális egységet tesztel. A tesztek az alkalmazás
 alapvető működését, az adatmodellek funkcióit, valamint a validációs
 logikát ellenőrzik.
@@ -111,51 +111,9 @@ Tesztesetek:
 - CheckNumber_ÜresSzöveg_HamisatKellAdjon: Ellenőrzi, hogy az üres szöveg validálása hamist ad-e
 
 ----------------------------------------------------------------------
-5. Tesztek futtatása
-----------------------------------------------------------------------
-
-A tesztek futtatásához a következő lépéseket kell elvégezni:
-
-1. Nyissa meg a KliensApp.sln solution fájlt a Visual Studio-ban
-2. Fordítsa le a projektet (Build > Build Solution)
-3. Nyissa meg a Test Explorer-t (Test > Test Explorer)
-4. Futtassa az összes tesztet a "Run All" gombra kattintva
-
-A tesztek sikeres futtatása után minden tesztnek zöldnek kell lennie,
-ami azt jelenti, hogy az alkalmazás alapvető funkciói helyesen működnek.
-
-----------------------------------------------------------------------
-6. További fejlesztési lehetőségek
-----------------------------------------------------------------------
-
-A jelenlegi tesztek csak az alapvető funkcionalitást ellenőrzik.
-A jövőben a következő területeken tudnám bővíteni a teszteket:
-
-1. Adatbázis műveletek mockolt tesztelése
-2. Integráció tesztek az API hívásokhoz
-3. UI automatizált tesztek a Windows Forms felülethez
-
-Mivel ez egy kezdő szintű projekt, ezért egyelőre csak az alapvető
-funkciók tesztelésére koncentráltam, hogy a projekt sikerélményt
-adjon a tesztelés területén is.
-
-----------------------------------------------------------------------
-7. Konklúzió
+5. Konklúzió
 ----------------------------------------------------------------------
 
 A KLiensApp2 alkalmazáshoz készített unit tesztjeim biztosítják, hogy az alapvető
 funkciók a várt módon működjenek. A tesztekkel ellenőrzött kód
 megbízhatóbb és könnyebben karbantartható. 
-
-A teszteket szigorúan pozitív tesztelésre építettem, azaz a
-helyes működést ellenőrzik, nem pedig a hibás eseteket. Ez biztosítja,
-hogy a főbb funkciók helyesen működnek, de nem garantálja, hogy
-minden hibaesetet kezel az alkalmazás.
-
-A tesztek a fejlesztés jelenlegi szakaszában alkalmasak az alapvető
-funkciók ellenőrzésére, de a jövőben bővítenem kell őket az alkalmazás
-fejlődésével párhuzamosan.
-
-======================================================================
-                                  VÉGE
-======================================================================
