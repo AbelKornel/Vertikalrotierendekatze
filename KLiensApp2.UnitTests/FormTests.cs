@@ -28,10 +28,5 @@ namespace KLiensApp2.UnitTests
                 Assert.Fail($"A Form2 létrehozásakor kivétel keletkezett: {ex.Message}");
             }
         }
-
-        // Megjegyzés: Bonyolultabb Form tesztek általában mockolást igényelnek,
-        // de egyelőre maradjunk az alapoknál. A Windows Forms alkalmazások tesztelése
-        // egy külön terület, ami túlmutat a jelenlegi tanulmányainkon, így itt csak
-        // a legegyszerűbb dolgokat teszteljük.
     }
 } 
