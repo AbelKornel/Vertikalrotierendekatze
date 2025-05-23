@@ -1,28 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|c:\\users\\rottj\\source\\repos\\vertikalrotierendekatze\\kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\ordering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\kliensapp2\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{E8C05095-1C7E-4517-BF6F-048B10A37AC4}|KLiensApp2\\KLiensApp2.csproj|solutionrelative:kliensapp2\\storeproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\smallbotond\\source\\Repositories\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,20 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
@@ -58,71 +25,19 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Ordering.cs",
-              "DocumentMoniker": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Ordering.cs",
-              "RelativeDocumentMoniker": "KLiensApp2\\Ordering.cs",
-              "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Ordering.cs",
-              "RelativeToolTip": "KLiensApp2\\Ordering.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T22:14:28.235Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Ordering.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Ordering.cs",
-              "RelativeDocumentMoniker": "KLiensApp2\\Ordering.cs",
-              "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Ordering.cs [Design]",
-              "RelativeToolTip": "KLiensApp2\\Ordering.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T22:13:57.291Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form2.cs",
-              "DocumentMoniker": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Form2.cs",
-              "RelativeDocumentMoniker": "KLiensApp2\\Form2.cs",
-              "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Form2.cs",
-              "RelativeToolTip": "KLiensApp2\\Form2.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAA2wL8AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T18:58:06.26Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form2.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Form2.cs",
-              "RelativeDocumentMoniker": "KLiensApp2\\Form2.cs",
-              "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\Form2.cs [Design]",
-              "RelativeToolTip": "KLiensApp2\\Form2.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T18:58:00.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StoreProduct.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\StoreProduct.cs",
-              "RelativeDocumentMoniker": "KLiensApp2\\StoreProduct.cs",
-              "ToolTip": "C:\\Users\\rottj\\source\\repos\\Vertikalrotierendekatze\\KLiensApp2\\StoreProduct.cs [Design]",
-              "RelativeToolTip": "KLiensApp2\\StoreProduct.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-22T18:57:58.018Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -2,7 +2,9 @@
                KLiensApp2 Alkalmazás Unit Tesztek Dokumentációja
 ======================================================================
 
-Készítette: Apáti Rebeka
+Készítette: Kis Botond
+Dátum: 2023.11.23.
+Verzió: 1.0
 
 ----------------------------------------------------------------------
 1. Bevezetés
@@ -116,7 +118,7 @@ Tesztesetek:
 
 A tesztek futtatásához a következő lépéseket kell elvégezni:
 
-1. Nyissa meg a KliensApp.sln solution fájlt a Visual Studio-ban
+1. Nyissa meg a KLiensApp2.sln solution fájlt a Visual Studio-ban
 2. Fordítsa le a projektet (Build > Build Solution)
 3. Nyissa meg a Test Explorer-t (Test > Test Explorer)
 4. Futtassa az összes tesztet a "Run All" gombra kattintva
@@ -158,4 +160,4 @@ fejlődésével párhuzamosan.
 
 ======================================================================
                                   VÉGE
-======================================================================
+====================================================================== 
