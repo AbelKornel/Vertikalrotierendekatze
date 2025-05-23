@@ -16,17 +16,27 @@ using LicitModul.DnnRecordvilleLicitModul.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hotcakes.Commerce;
+using Hotcakes.Commerce.Catalog;
+using Hotcakes.Commerce.Extensions;
+using Hotcakes.Commerce.Orders;
+using Hotcakes.Commerce.Urls;
+using Hotcakes.CommerceDTO;
+using Hotcakes.CommerceDTO.v1;
+using Hotcakes.CommerceDTO.v1.Client;
+using Hotcakes.CommerceDTO.v1.Catalog;
+using System.Runtime.InteropServices;
+
 
 namespace LicitModul.DnnRecordvilleLicitModul.Components
 {
-
     internal interface IItemManager
     {
         void CreateItem(Item t);
-        void DeleteItem(int itemId, int moduleId);
+        void DeleteItem(string itemId, int moduleId);
         void DeleteItem(Item t);
         IEnumerable<Item> GetItems(int moduleId);
-        Item GetItem(int itemId, int moduleId);
+        Item GetItem(string itemId, int moduleId);
         void UpdateItem(Item t);
     }
 
@@ -47,7 +57,7 @@ namespace LicitModul.DnnRecordvilleLicitModul.Components
             }
         }
 
-        public IEnumerable<Auction> GetBidsByItemId(int itemId)
+        public IEnumerable<Auction> GetBidsByItemId(string itemId)
         {
             using (var context = DataContext.Instance())
             {
@@ -61,40 +71,83 @@ namespace LicitModul.DnnRecordvilleLicitModul.Components
     {
         private static readonly AuctionManager _instance = new AuctionManager();
         public static AuctionManager Instance => _instance;
+        private readonly Api _api;
 
-        private AuctionManager() { }
+        private AuctionManager()
+        {
+            string storeUrl = "http://rendfejl1018.northeurope.cloudapp.azure.com";
+            string apiKey = "1-4496a442-8767-4aa7-ad10-c0c8263098f1";
+            _api = new Api(storeUrl, apiKey);
+        }
 
         public IEnumerable<Item> GetItems(int moduleId)
         {
-            System.IO.File.AppendAllText(@"C:\temp\checkpoint.txt",
-                $"[GetItems] ModuleId={moduleId}, idő: {DateTime.Now}\n");
+            var response = _api.ProductsFindAll();
 
-            using (var ctx = DotNetNuke.Data.DataContext.Instance())
+            if (response == null || response.Content == null)
             {
-                var result = ctx.ExecuteQuery<Item>(
-                    System.Data.CommandType.Text,
-                    "SELECT * FROM RecordvilleLicitModul_Items WHERE ModuleId = @0",
-                    moduleId).ToList();
-
-                System.IO.File.AppendAllText(@"C:\temp\checkpoint.txt",
-                    $"  → Visszatérő lista hossza: {result.Count}\n");
-
-                return result;
+                return new List<Item>();
             }
+
+            var auctionProducts = response.Content
+                .Where(p => p.IsAvailableForSale == false)
+                .Select(p =>
+                {
+                    var bids = AuctionGenerator.Instance.GetBidsByItemId(p.Bvin) ?? new List<Auction>();
+                    var highestBid = bids.OrderByDescending(b => b.Amount).FirstOrDefault();
+
+                    return new Item
+                    {
+                        ItemId = p.Bvin,
+                        Sku = p.Sku,
+                        ItemName = p.ProductName,
+                        ItemDescription = p.LongDescription,
+                        ImageUrl = p.ImageFileMedium,
+                        StartingPrice = p.SitePrice,
+                        AuctionEndTime = GetOrGenerateAuctionEndTime(p.Bvin),
+                        MinimumBidIncrement = p.SitePrice * 0.1m,
+                        HighestPrice = highestBid?.Amount,
+                        HighestUserId = highestBid?.UserId,
+                        ModuleId = moduleId
+                    };
+                })
+                .ToList();
+
+            return auctionProducts;
         }
 
-        public Item GetItem(int itemId, int moduleId)
+
+        public Item GetItem(string itemId, int moduleId)
         {
-            System.IO.File.WriteAllText(@"C:\temp\getitem-check.txt", $"GetItem called for item {itemId}, module {moduleId}");
+            var response = _api.ProductsFind(itemId);
 
-            using (var ctx = DataContext.Instance())
+            if (response == null || response.Content == null)
             {
-                var sql = "SELECT * FROM RecordvilleLicitModul_Items WHERE ItemId = @0 AND ModuleId = @1";
-                return ctx.ExecuteQuery<Item>(
-                    System.Data.CommandType.Text,
-                    sql, itemId, moduleId).FirstOrDefault();
+                return null;
             }
+
+            var p = response.Content;
+            var bids = AuctionGenerator.Instance.GetBidsByItemId(p.Bvin) ?? new List<Auction>();
+            var highestBid = bids.OrderByDescending(b => b.Amount).FirstOrDefault();
+
+            return new Item
+            {
+                ItemId = p.Bvin,
+                Sku = p.Sku,
+                ItemName = p.ProductName,
+                ItemDescription = p.LongDescription,
+                ImageUrl = p.ImageFileMedium,
+                StartingPrice = p.SitePrice,
+                AuctionEndTime = GetOrGenerateAuctionEndTime(p.Bvin),
+                MinimumBidIncrement = p.SitePrice * 0.1m,
+                HighestPrice = highestBid?.Amount,
+                HighestUserId = highestBid?.UserId,
+                ModuleId = moduleId
+            };
         }
+
+
+
 
         public void CreateItem(Item t)
         {
@@ -123,11 +176,44 @@ namespace LicitModul.DnnRecordvilleLicitModul.Components
             }
         }
 
-        public void DeleteItem(int itemId, int moduleId)
+        public void DeleteItem(string itemId, int moduleId)
         {
             var t = GetItem(itemId, moduleId);
             DeleteItem(t);
         }
+
+        private static readonly Dictionary<string, DateTime> auctionEndTimes = new Dictionary<string, DateTime>();
+
+
+
+
+        private static readonly bool IsTestMode = false;
+
+        private DateTime GetOrGenerateAuctionEndTime(string itemId)
+        {
+            if (auctionEndTimes.ContainsKey(itemId))
+            {
+                return auctionEndTimes[itemId];
+            }
+
+            DateTime endTime;
+            if (IsTestMode)
+            {
+                endTime = DateTime.UtcNow.AddSeconds(20);
+            }
+            else
+            {
+                var random = new Random(itemId.GetHashCode());
+                int days = random.Next(5, 21);
+                endTime = DateTime.UtcNow.Date.AddDays(days).AddHours(20);
+            }
+
+            auctionEndTimes[itemId] = endTime;
+            return endTime;
+        }
+
+
+
     }
 
 }

@@ -22,6 +22,14 @@ using System.Linq;
 using System.Web.Compilation;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using Hotcakes.Commerce;
+using Hotcakes.Commerce.Catalog;
+using Hotcakes.Commerce.Orders;
+using Hotcakes.Commerce.Storage;
+using Hotcakes.Commerce.Extensions;
+using Hotcakes.Commerce.Urls;
+using System.Collections.Generic;
+using DotNetNuke.Data;
 
 
 namespace LicitModul.DnnRecordvilleLicitModul.Controllers
@@ -30,13 +38,13 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
     public class ItemController : DnnController
     {
 
-        public ActionResult Delete(int itemId)
+        public ActionResult Delete(string itemId)
         {
             AuctionManager.Instance.DeleteItem(itemId, ModuleContext.ModuleId);
             return RedirectToDefaultRoute();
         }
 
-        public ActionResult Edit(int itemId = -1)
+        public ActionResult Edit(string itemId)
         {
             DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(CommonJs.DnnPlugins);
 
@@ -46,29 +54,30 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
 
             ViewBag.Users = users;
 
-            var item = (itemId == -1)
-                 ? new Item { ModuleId = ModuleContext.ModuleId }
-                 : AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
+            var item = string.IsNullOrEmpty(itemId)
+            ? new Item { ModuleId = ModuleContext.ModuleId }
+            : AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
+
 
             return View(item);
         }
 
 
         [HttpPost]
-        public JsonResult PlaceBid(int itemId, int userId, decimal bidAmount)
+        public JsonResult PlaceBid(string itemId, int userId, decimal bidAmount)
         {
             try
             {
                 var item = AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
                 if (item == null)
                 {
-                    return Json(new { newPrice = item.StartingPrice });
+                    return Json(new { success = false, newPrice = 0 });
                 }
 
                 decimal currentPrice = item.HighestPrice ?? item.StartingPrice;
                 if (bidAmount < currentPrice + item.MinimumBidIncrement)
                 {
-                    return Json(new { newPrice = item.HighestPrice });
+                    return Json(new { success = false, newPrice = currentPrice });
                 }
 
                 var bid = new Auction
@@ -84,24 +93,51 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
                 item.HighestPrice = bidAmount;
                 item.HighestUserId = userId;
                 AuctionManager.Instance.UpdateItem(item);
-                return Json(new { newPrice = item.HighestPrice });
+
+                return Json(new { success = true, newPrice = item.HighestPrice });
             }
             catch (Exception ex)
             {
-                return Json(new { newPrice = 0 });
+                return Json(new { success = false, newPrice = 0 });
             }
         }
+
+
 
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
+            var hccApp = HotcakesApplication.Current;
+
+            var items1 = AuctionManager.Instance.GetItems(ModuleContext.ModuleId);
+
+            foreach (var item in items1)
+            {
+                if (item.AuctionEndTime.HasValue &&
+                    item.AuctionEndTime.Value < DateTime.UtcNow &&
+                    item.HighestUserId.HasValue &&
+                    item.HighestPrice.HasValue)
+                {
+                    var product = hccApp.CatalogServices.Products.Find(item.ItemId);
+                    if (product != null && product.SitePrice != item.HighestPrice.Value)
+                    {
+                        product.SitePrice = item.HighestPrice.Value;
+                        product.Status = Hotcakes.Commerce.Catalog.ProductStatus.Active;
+                        hccApp.CatalogServices.Products.Update(product);
+                    }
+                }
+            }
+
+
+            var userId = UserController.Instance.GetCurrentUserInfo().UserID;
+            ViewBag.UserId = userId;
 
             ViewBag.ModuleId = ModuleContext.ModuleId;
             var items = AuctionManager.Instance.GetItems(ModuleContext.ModuleId);
             return View(items);
         }
 
-        public ActionResult Details(int itemId)
+        public ActionResult Details(string itemId)
         {
             var item = AuctionManager.Instance.GetItem(itemId, ModuleContext.ModuleId);
             if (item == null)
@@ -115,12 +151,45 @@ namespace LicitModul.DnnRecordvilleLicitModul.Controllers
             ViewBag.ItemId = itemId;
             ViewBag.UserId = UserController.Instance.GetCurrentUserInfo().UserID;
             ViewBag.MinimumBidIncrement = item.MinimumBidIncrement;
+            ViewBag.CurrentPrice = item.HighestPrice ?? item.StartingPrice;
+            ViewBag.AuctionEndTime = item.AuctionEndTime;
+            ViewBag.HighestUserId = item.HighestUserId;
 
             return View("Details", item);
         }
 
+        /*
+        public class UserContactInfo
+        {
+            public int UserId { get; set; }
+            public string Name { get; set; }
+            public string Address { get; set; }
+            public string Phone { get; set; }
+            public string Email { get; set; }
+            public bool MarketingConsent { get; set; }
+            public DateTime SubmittedAt { get; set; }
+        }
 
+        
+        [HttpGet]
+        public ActionResult WinningBids(int userId)
+        {
+            var winningItems = AuctionManager.Instance.GetItems(ModuleContext.ModuleId)
+                .Where(item => item.AuctionEndTime.HasValue && item.AuctionEndTime.Value < DateTime.Now)
+                .Where(item => item.HighestUserId == userId)
+                .ToList();
 
+            if (winningItems.Any())
+            {
+                return View(winningItems);
+            }
+            else
+            {
+                ViewBag.Message = "Sajnáljuk, nem nyert licitet.";
+                return View(new List<Item>());
+            }
+        }
+        */
 
     }
 }

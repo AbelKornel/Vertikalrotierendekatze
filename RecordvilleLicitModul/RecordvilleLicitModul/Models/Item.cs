@@ -19,18 +19,14 @@ using System.Web.Caching;
 
 namespace LicitModul.DnnRecordvilleLicitModul.Models
 {
-    [TableName("RecordvilleLicitModul_Items")]
-    [PrimaryKey("ItemId", AutoIncrement = true)]
-    [Cacheable("Items", CacheItemPriority.Default, 20)]
-    [Scope("ModuleId")]
     public class Item
     {
-        public int ItemId { get; set; } = -1;
+        public string ItemId { get; set; }
+        public string Sku { get; set; }
         public string ItemName { get; set; }
         public string ItemDescription { get; set; }
         public string ImageUrl { get; set; }
         public int ModuleId { get; set; }
-
         public decimal? HighestPrice { get; set; }
         public int? HighestUserId { get; set; }
         public DateTime? AuctionStartTime { get; set; }

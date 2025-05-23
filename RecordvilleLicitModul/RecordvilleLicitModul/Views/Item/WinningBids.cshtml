@@ -1,0 +1,39 @@
+﻿@model IEnumerable<LicitModul.DnnRecordvilleLicitModul.Models.Item>
+
+    <h2>Ön által megnyert licitek:</h2>
+
+    @if (Model == null || !Model.Any())
+    {
+        <p class="text-danger">Nincs nyertes licit.</p>
+    }
+    else
+    {
+        <div class="auction-list">
+            @foreach (var item in Model)
+            {
+                <div class="auction-details" style="border: 1px solid #ccc; border-radius: 6px; padding: 15px; margin-bottom: 20px;">
+                    <img src="@item.ImageUrl" alt="@item.ItemName" class="auction-img" style="max-width: 100px;" />
+                    <h2>@item.ItemName</h2>
+                    <p>
+                        <strong>Jelenlegi ár:</strong>
+                        @(item.HighestPrice.HasValue ? item.HighestPrice.Value.ToString("N0") + " Ft" : "Nincs még licit")<br />
+                        <strong>Licit vége:</strong>
+                        @(item.AuctionEndTime.HasValue ? item.AuctionEndTime.Value.ToLocalTime().ToString("yyyy.MM.dd HH:mm:ss") : "Nincs megadva")
+                    </p>
+
+                    <p>
+                        Köszönjük szépen a licitálást! Kérjük, helyezze kosarába a nyert terméket az alábbi gombbal:
+                    </p>
+
+                    @if (item.HighestPrice.HasValue)
+                    {
+                        <form method="post" action="@Url.Action("AddToCart", "Item")">
+                            <input type="hidden" name="itemId" value="@item.ItemId" />
+                            <input type="hidden" name="customPrice" value="@item.HighestPrice.Value.ToString("0.##", System.Globalization.CultureInfo.InvariantCulture)" />
+                            <button type="submit" class="btn btn-success">🛒 Kosárba teszem</button>
+                        </form>
+                    }
+                </div>
+            }
+        </div>
+    }

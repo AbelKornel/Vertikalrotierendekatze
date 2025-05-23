@@ -14,7 +14,7 @@ namespace LicitModul.DnnRecordvilleLicitModul.Models
     public class Auction
     {
         public int AuctionId { get; set; } = -1;
-        public int ItemId { get; set; }
+        public string ItemId { get; set; }
         public int UserId { get; set; }
         public decimal Amount { get; set; }
         public DateTime AuctionTime { get; set; } = DateTime.UtcNow;
